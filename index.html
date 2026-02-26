@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT × ISO | 日本のマネジメントを進化させる</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">IT × ISO <span>Vision</span></div>
+            <nav class="nav-links">
+                <a href="#intro">はじめに</a>
+                <a href="#about">強みと実績</a>
+                <a href="#services">サービス一覧</a>
+                <a href="#pricing">料金</a>
+                <a href="#company">企業情報</a>
+                <a href="#contact" class="btn btn-nav btn-dl">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>資料ダウンロード
+                </a>
+                <a href="#contact" class="btn btn-nav btn-orange">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:6px;"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>お問い合わせ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-label fade-in">Management Innovation for Japan</div>
+            <h1 class="fade-in">"IT × ISO"で、<br><span>企業の成長を加速させる</span>マネジメントへ。</h1>
+            <p class="fade-in">ISOは、取得するものではない。それは、企業の未来を動かす仕組みである。</p>
+            <div class="hero-btns fade-in">
+                <a href="#intro" class="btn">私たちの考え方を見る</a>
+                <a href="#contact" class="btn btn-outline">資料(PDF)をダウンロード</a>
+            </div>
+        </div>
+        <div class="hero-scroll"></div>
+    </section>
+
+    <!-- Intro Section (はじめに) -->
+    <section class="intro" id="intro">
+        <div class="container">
+            <div class="intro-box fade-in">
+                <p class="intro-sub">― 組織が描く未来の実現に向けて ―</p>
+                <h2 class="intro-title">私たちは、単なる"サービスのご紹介"はいたしません。</h2>
+                <div class="intro-text">
+                    <p>多くの日本企業が目指している「変化する時代に適応し続ける組織」「社員一人ひとりが主体的に動くマネジメント」。その実現に、どのように貢献できるかを私たちは問い続けています。</p>
+                    <p>ISOやマネジメントシステムが"守るための仕組み"にとどまり、現場の負担になっている現状を数多く見てきました。しかし本来、マネジメントとは組織の強みを伸ばし、挑戦を後押しするための「成長のエンジン」であるべきです。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (強みと実績) -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="step-num">01. STRENGTH</span>
+                <h2>信頼と実績</h2>
+                <p>中小企業の経営基盤を支える、国内屈指の認証グループとして</p>
+            </div>
+            <div class="about-layout fade-in">
+                <div class="stat-item">
+                    <span class="number" data-target="6000">0</span>
+                    <span class="label">グループ合計登録組織数</span>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-container">
+                        <canvas id="isoChart"></canvas>
+                        <div class="chart-center-label">
+                            <p class="chart-center-title">ISO認証登録件数<br>グループ合計</p>
+                            <p class="chart-center-value">約<span>6,000</span>件</p>
+                        </div>
+                    </div>
+                    <ul class="chart-legend">
+                        <li><span class="legend-dot" style="background:#0B3D6E;"></span>ISO9001</li>
+                        <li><span class="legend-dot" style="background:#2F80ED;"></span>ISO14001</li>
+                        <li><span class="legend-dot" style="background:#7EC8E3;"></span>ISO27001</li>
+                        <li><span class="legend-dot" style="background:#C9E8F5;"></span>ISO45001</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="about-desc fade-in">国内シェア第3位の審査を担っています。NSホールディングスグループでは、ISOを起点に、中小企業の経営基盤を支えるパートナーとして企業の挑戦を応援し続けます。</p>
+        </div>
+    </section>
+
+    <!-- Challenges Section (日本企業の現状と可能性) -->
+    <section class="situation" id="challenges">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="step-num">02. CHALLENGES & POTENTIAL</span>
+                <h2>日本企業の現状と可能性</h2>
+                <p>私たちが向き合う、組織の課題と未来</p>
+            </div>
+            <div class="situation-grid">
+                <div class="situation-card fade-in">
+                    <div class="card-icon">!</div>
+                    <h3>形骸化する仕組み</h3>
+                    <p>「審査のためだけ」の運用になり、本業を圧迫している組織が少なくありません。私たちはこの「義務」を「価値」へ変えます。</p>
+                </div>
+                <div class="situation-card fade-in">
+                    <div class="card-icon">?</div>
+                    <h3>属人化からの脱却</h3>
+                    <p>個人のスキルに頼った運営は、組織の成長を阻害します。ITによる標準化で、誰でも高い成果を出せる基盤を創ります。</p>
+                </div>
+                <div class="situation-card fade-in">
+                    <div class="card-icon">→</div>
+                    <h3>あるべき未来像</h3>
+                    <p>「この組織なら安心して任せられる」と社会から評価される。そんな信頼の連鎖を、マネジメントの力で生み出します。</p>
+                </div>
+            </div>
+            <div class="situation-message fade-in">
+                <p>デジタルの力で、<br><span>組織の強みを引き伸ばすための新しい仕組みづくり</span>を提案します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proposal Section (進化へのご提案) -->
+    <section class="proposal" id="proposal">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="step-num">03. EVOLUTION</span>
+                <h2>進化へのご提案</h2>
+                <p>未来を実現するための、3つのアプローチ</p>
+            </div>
+            <div class="proposal-pillars">
+                <div class="pillar fade-in">
+                    <div class="pillar-content">
+                        <h3>業務が自然に回る標準化</h3>
+                        <p>特定の人に依存せず、誰が担当しても再現できる体制を構築。経営者が未来を描く時間を確保します。</p>
+                    </div>
+                    <div class="pillar-arrow"></div>
+                </div>
+                <div class="pillar fade-in">
+                    <div class="pillar-content">
+                        <h3>実務と連動するデジタル運用</h3>
+                        <p>WebMiCSによる文書管理の自動化。形式ではなく"使えるISO"として運用を定着させます。</p>
+                    </div>
+                    <div class="pillar-arrow"></div>
+                </div>
+                <div class="pillar fade-in">
+                    <div class="pillar-content">
+                        <h3>社員教育と実務の連動</h3>
+                        <p>教育を単発で終わらせず、日々の業務と結びつけて継続的な成長を促し、組織力向上へ直結させます。</p>
+                    </div>
+                    <div class="pillar-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <div class="impact-box fade-in">
+                <h2>新しい仕組みが生み出す「組織の進化」</h2>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <span class="impact-val">30-50%</span>
+                        <span class="impact-label">管理工数の削減</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-val">SPEED</span>
+                        <span class="impact-label">意思決定の向上</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-val">CULTURE</span>
+                        <span class="impact-label">挑戦できる文化の獲得</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essence Section -->
+    <section class="essence">
+        <div class="container">
+            <div class="essence-content fade-in">
+                <h2>私たちの提案の本質</h2>
+                <p>私たちは、ISOを"取得するもの"とは考えていません。<br>それは、組織の未来を動かす"仕組み"です。</p>
+                <p>ビジョンと現場を結び、成長が自然に生まれる状態をつくること。<br>その未来を共に創る存在でありたい。それが、私たちの本質です。</p>
+                <a href="#contact" class="btn btn-large">資料（PDF形式）を請求する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <div class="footer-logo">IT × ISO</div>
+                    <p>NSホールディングスグループ<br>組織の経営基盤を支えるパートナー</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Vision</h4>
+                        <a href="#intro">はじめに</a>
+                        <a href="#about">強みと実績</a>
+                        <a href="#challenges">現状と可能性</a>
+                        <a href="#proposal">進化の提案</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <a href="#">資料請求</a>
+                        <a href="#">お問い合わせ</a>
+                        <a href="#">プライバシーポリシー</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 NS Holdings Group. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
