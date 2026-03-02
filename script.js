@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data: {
                         labels: ['ISO9001', 'ISO14001', 'ISO27001', 'ISO45001'],
                         datasets: [{
-                            data: [3500, 1600, 800, 80],
+                            data: [3500, 1500, 300, 200],
                             backgroundColor: ['#0B3D6E', '#2F80ED', '#7EC8E3', '#C9E8F5'],
                             borderWidth: 0,
                             hoverOffset: 8

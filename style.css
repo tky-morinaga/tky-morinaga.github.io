@@ -413,6 +413,141 @@ header .container {
     color: var(--text-light);
 }
 
+/* --- Empathy (課題共感) --- */
+.empathy {
+    padding: 100px 0;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.empathy .section-header .step-num {
+    color: #7EC8E3;
+}
+
+.empathy .section-header h2 {
+    color: var(--white);
+}
+
+.empathy .section-header p {
+    color: rgba(255,255,255,0.6);
+}
+
+.empathy-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.empathy-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 36px 28px;
+    transition: var(--transition);
+}
+
+.empathy-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.empathy-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.empathy-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.empathy-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+}
+
+.empathy-message {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.empathy-message p {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: var(--white);
+}
+
+.empathy-message span {
+    color: #7EC8E3;
+    border-bottom: 2px solid #7EC8E3;
+}
+
+/* --- Vision (あるべき姿) --- */
+.vision {
+    padding: 100px 0;
+    background-color: var(--bg);
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.vision-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 44px 36px;
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    transition: var(--transition);
+}
+
+.vision-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(47,128,237,0.12);
+}
+
+.vision-icon {
+    width: 52px;
+    height: 52px;
+    background-color: var(--accent-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--accent);
+}
+
+.vision-card h3 {
+    font-size: 19px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.vision-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.9;
+}
+
 /* --- Situation --- */
 .situation {
     padding: 100px 0;
@@ -541,7 +676,7 @@ header .container {
 
 .impact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     text-align: center;
 }
@@ -648,11 +783,23 @@ footer {
 
 @media (max-width: 992px) {
     .nav-links { display: none; }
-    .situation-grid, .impact-grid {
+    .situation-grid, .impact-grid, .vision-grid {
         grid-template-columns: 1fr;
+    }
+    .empathy-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     .footer-top {
         flex-direction: column;
         gap: 40px;
+    }
+    .about-layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .empathy-grid {
+        grid-template-columns: 1fr;
     }
 }
