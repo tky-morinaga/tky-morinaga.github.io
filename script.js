@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Intersection Observer for Fade-in ---
-    const observerOptions = {
-        threshold: 0.15
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.15 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
@@ -19,11 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Header Scroll Effect ---
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 100);
     });
 
 
@@ -33,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const duration = 2000;
         const step = target / (duration / 16);
         let current = 0;
-
         const update = () => {
             current += step;
             if (current < target) {
@@ -46,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         update();
     };
 
+
+    // --- Donut Chart & Count-up trigger ---
     const aboutSection = document.getElementById('about');
     let chartDrawn = false;
 
@@ -53,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entries[0].isIntersecting) {
             document.querySelectorAll('.number').forEach(countUp);
 
-            // --- Donut Chart ---
             if (!chartDrawn) {
                 chartDrawn = true;
                 const ctx = document.getElementById('isoChart').getContext('2d');
@@ -62,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data: {
                         labels: ['ISO9001', 'ISO14001', 'ISO27001', 'ISO45001'],
                         datasets: [{
-                            data: [3500, 1600, 800, 80],
+                            data: [3500, 1600, 820, 80],
                             backgroundColor: ['#0B3D6E', '#2F80ED', '#7EC8E3', '#C9E8F5'],
                             borderWidth: 0,
                             hoverOffset: 8
@@ -91,25 +83,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { threshold: 0.4 });
 
-    statsObserver.observe(aboutSection);
+    if (aboutSection) statsObserver.observe(aboutSection);
 
 
     // --- Smooth Scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
                 const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-             }
+                const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+            // モバイルメニューを閉じる
+            closeMobileMenu();
         });
     });
+
+
+    // --- Hamburger / Mobile Menu ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function closeMobileMenu() {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    }
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
+
+    // メニュー外クリックで閉じる
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
+
+
+    // --- Mobile Dropdown (サービス一覧) ---
+    const mobileDropdownToggle = document.getElementById('mobileDropdownToggle');
+    const mobileDropdownMenu = document.getElementById('mobileDropdownMenu');
+    const mobileDropdownWrap = mobileDropdownToggle ? mobileDropdownToggle.closest('.mobile-dropdown') : null;
+
+    if (mobileDropdownToggle) {
+        mobileDropdownToggle.addEventListener('click', () => {
+            mobileDropdownWrap.classList.toggle('open');
+        });
+    }
 
 });
