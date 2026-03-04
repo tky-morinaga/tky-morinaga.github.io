@@ -30,15 +30,44 @@
                         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">ISO認証審査 <span class="dropdown-item-arrow">›</span></a>
-                        <a href="#" class="dropdown-item">監査 <span class="dropdown-item-arrow">›</span></a>
-                        <a href="#" class="dropdown-item">ISO関連セミナー一覧</a>
+                        <div class="dropdown-col">
+                            <div class="dropdown-sub-wrap">
+                                <a href="#" class="dropdown-item">ISO認証審査 <span class="dropdown-item-arrow">›</span></a>
+                                <div class="dropdown-submenu">
+                                    <a href="#" class="submenu-item">スタンダードコース</a>
+                                    <a href="#" class="submenu-item">アドバンスコース</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-sub-wrap">
+                                <a href="#" class="dropdown-item">監査 <span class="dropdown-item-arrow">›</span></a>
+                                <div class="dropdown-submenu">
+                                    <a href="#" class="submenu-item">業務監査</a>
+                                    <a href="#" class="submenu-item">セキュリティ監査</a>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-item">ISO関連セミナー一覧</a>
+                        </div>
                     </div>
                 </div>
                 <!-- ▲ ドロップダウンここまで -->
 
                 <a href="#pricing">料金</a>
-                <a href="#company">企業情報</a>
+                <div class="nav-dropdown" id="companyDropdown">
+                    <a href="#company" class="nav-dropdown-toggle">
+                        企業情報
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item">お知らせ</a>
+                            <a href="#" class="dropdown-item">品質基本方針</a>
+                            <a href="#" class="dropdown-item">プライバシーポリシー</a>
+                            <a href="#" class="dropdown-item">サイト利用規約</a>
+                            <a href="#" class="dropdown-item">インボイス制度 適格請求書発行事業者情報</a>
+                            <a href="#" class="dropdown-item">採用情報</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#contact" class="btn btn-nav btn-dl">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>資料ダウンロード
                 </a>
@@ -63,13 +92,42 @@
                     <svg class="mobile-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="mobile-dropdown-menu" id="mobileDropdownMenu">
-                    <a href="#" class="dropdown-item">ISO認証審査 <span class="dropdown-item-arrow">›</span></a>
-                    <a href="#" class="dropdown-item">監査 <span class="dropdown-item-arrow">›</span></a>
-                    <a href="#" class="dropdown-item">ISO関連セミナー一覧</a>
+                    <div class="mobile-sub-wrap">
+                        <button class="mobile-sub-toggle">
+                            ISO認証審査 <span class="mobile-sub-arrow">›</span>
+                        </button>
+                        <div class="mobile-sub-menu">
+                            <a href="#">スタンダードコース</a>
+                            <a href="#">アドバンスコース</a>
+                        </div>
+                    </div>
+                    <div class="mobile-sub-wrap">
+                        <button class="mobile-sub-toggle">
+                            監査 <span class="mobile-sub-arrow">›</span>
+                        </button>
+                        <div class="mobile-sub-menu">
+                            <a href="#">業務監査</a>
+                            <a href="#">セキュリティ監査</a>
+                        </div>
+                    </div>
+                    <a href="#">ISO関連セミナー一覧</a>
                 </div>
             </div>
             <a href="#pricing">料金</a>
-            <a href="#company">企業情報</a>
+            <div class="mobile-dropdown" id="mobileDropdownCompany">
+                <button class="mobile-dropdown-toggle" id="mobileDropdownCompanyToggle">
+                    企業情報
+                    <svg class="mobile-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">お知らせ</a>
+                    <a href="#">品質基本方針</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">サイト利用規約</a>
+                    <a href="#">インボイス制度 適格請求書発行事業者情報</a>
+                    <a href="#">採用情報</a>
+                </div>
+            </div>
             <a href="#contact" class="mobile-btn-dl">資料ダウンロード</a>
             <a href="#contact" class="mobile-btn-orange">お問い合わせ</a>
         </div>

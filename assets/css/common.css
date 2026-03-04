@@ -175,14 +175,22 @@ header .container { display: flex; justify-content: space-between; align-items: 
     white-space: nowrap;
     cursor: pointer;
     transition: var(--transition);
-    padding-bottom: 4px;
+}
+.nav-dropdown.open .nav-dropdown-toggle {
+    color: var(--accent);
     border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+}
+.nav-dropdown-toggle .dropdown-arrow {
+    color: var(--primary);
+}
+.nav-dropdown.open .nav-dropdown-toggle .dropdown-arrow {
+    color: var(--accent);
 }
 .dropdown-arrow {
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
-.nav-dropdown:hover .dropdown-arrow,
 .nav-dropdown.open .dropdown-arrow {
     transform: rotate(180deg);
 }
@@ -198,7 +206,17 @@ header .container { display: flex; justify-content: space-between; align-items: 
     box-shadow: 0 12px 40px rgba(0,0,0,0.13);
     min-width: 220px;
     z-index: 9999;
-    padding: 6px 0;
+    padding: 0;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.dropdown-col {
+    padding: 6px 0; /* 元の padding を col 側に移動 */
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-col:first-child {
+    border-right: 1px solid #f0f4f8;
 }
 .dropdown-menu::before {
     content: '';
@@ -210,13 +228,17 @@ header .container { display: flex; justify-content: space-between; align-items: 
     border-right: 7px solid transparent;
     border-bottom: 8px solid var(--accent);
 }
-.nav-dropdown:hover .dropdown-menu {
+.nav-dropdown.open .dropdown-menu {
+    display: grid;
     display: block;
     animation: dropdownFadeIn 0.2s ease forwards;
 }
 @keyframes dropdownFadeIn {
     from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
     to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.dropdown-col:first-child {
+    border-right: 1px solid #f0f4f8;
 }
 .dropdown-item {
     display: flex;
@@ -240,6 +262,70 @@ header .container { display: flex; justify-content: space-between; align-items: 
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
+}
+/* activeクラスはホバーしていない時のみ青背景、hover時はsuper側に委譲 */
+.dropdown-item.active {
+    background: var(--accent);
+    color: var(--white) !important;
+}
+/* サブメニュー（フライアウト） */
+.dropdown-sub-wrap {
+    position: relative;
+}
+.dropdown-sub-wrap:hover > .dropdown-item {
+    background: var(--accent) !important;
+    color: var(--white) !important;
+}
+.dropdown-sub-wrap:hover > .dropdown-item .dropdown-item-arrow {
+    color: var(--white);
+}
+.dropdown-sub-wrap:hover > .dropdown-item.active {
+    background: var(--accent);  /* hover側で統一管理、activeは上書きしない */
+}
+.dropdown-sub-wrap:not(:hover) > .dropdown-item.active {
+    background: var(--accent);
+    color: var(--white) !important;
+/* activeでない項目がhoverされた時に他のactiveを打ち消す */
+}
+.dropdown-col:hover .dropdown-item.active:not(:hover) {
+    background: transparent;
+    color: var(--text) !important;
+}
+.dropdown-col:hover .dropdown-item.active:not(:hover) .dropdown-item-arrow {
+    color: var(--accent);
+}
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 12px); /* 左列から12px離す */;
+    background: var(--white);
+    border-top: 3px solid var(--accent);
+    border-radius: 8px;
+    box-shadow: 8px 8px 32px rgba(0,0,0,0.12);
+    min-width: 220px;
+    z-index: 10000;
+    padding: 6px 0;
+}
+.dropdown-sub-wrap:hover .dropdown-submenu {
+    display: block;
+    animation: dropdownFadeIn 0.18s ease forwards;
+}
+.submenu-item {
+    display: block;
+    padding: 13px 24px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f4f8;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.submenu-item:last-child { border-bottom: none; }
+.submenu-item:hover {
+    background: var(--accent-light);
+    color: var(--accent);
 }
 
 /* ===========================
@@ -334,7 +420,9 @@ header.scrolled ~ .mobile-menu {
 
 .mobile-dropdown-menu { display: none; background: #f8fafc; }
 .mobile-dropdown.open .mobile-dropdown-menu { display: block; }
-.mobile-dropdown-menu a {
+
+/* フラットリンク（ISO関連セミナー一覧など） */
+.mobile-dropdown-menu > a {
     display: block;
     padding: 12px 28px 12px 40px;
     color: var(--text-light);
@@ -343,8 +431,51 @@ header.scrolled ~ .mobile-menu {
     border-bottom: 1px solid #eef2f7;
     transition: background 0.2s;
 }
-.mobile-dropdown-menu a:last-child { border-bottom: none; }
-.mobile-dropdown-menu a:hover { background: var(--accent-light); color: var(--accent); }
+.mobile-dropdown-menu > a:last-child { border-bottom: none; }
+.mobile-dropdown-menu > a:hover { background: var(--accent-light); color: var(--accent); }
+
+/* サブメニュー */
+.mobile-sub-wrap { border-bottom: 1px solid #eef2f7; }
+.mobile-sub-wrap:last-child { border-bottom: none; }
+
+.mobile-sub-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 28px 12px 40px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    text-align: left;
+}
+.mobile-sub-toggle:hover { background: var(--accent-light); color: var(--accent); }
+
+.mobile-sub-arrow {
+    font-size: 16px;
+    color: var(--accent);
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.mobile-sub-wrap.open .mobile-sub-arrow { transform: rotate(90deg); }
+
+.mobile-sub-menu { display: none; background: #eef2f7; }
+.mobile-sub-wrap.open .mobile-sub-menu { display: block; }
+.mobile-sub-menu a {
+    display: block;
+    padding: 11px 28px 11px 56px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.2s;
+}
+.mobile-sub-menu a:last-child { border-bottom: none; }
+.mobile-sub-menu a:hover { background: var(--accent-light); color: var(--accent); }
 
 .mobile-btn-dl,
 .mobile-btn-orange {
