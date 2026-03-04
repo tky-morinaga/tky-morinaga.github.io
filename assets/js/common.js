@@ -66,16 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- Mobile Dropdown（サービス一覧）---
-    const mobileDropdownToggle = document.getElementById('mobileDropdownToggle');
-    const mobileDropdownWrap = mobileDropdownToggle
-        ? mobileDropdownToggle.closest('.mobile-dropdown')
-        : null;
-
-    if (mobileDropdownToggle) {
-        mobileDropdownToggle.addEventListener('click', () => {
-            mobileDropdownWrap.classList.toggle('open');
+    // --- Mobile Dropdown（複数対応）---
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            toggle.closest('.mobile-dropdown').classList.toggle('open');
         });
-    }
+    });
+
+
+    // --- Desktop Dropdown 遅延クローズ（複数対応）---
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+        let closeTimer = null;
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(closeTimer);
+            dropdown.classList.add('open');
+        });
+        dropdown.addEventListener('mouseleave', () => {
+            closeTimer = setTimeout(() => {
+                dropdown.classList.remove('open');
+            }, 200);
+        });
+    });
 
 });
