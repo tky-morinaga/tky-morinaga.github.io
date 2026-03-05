@@ -185,6 +185,14 @@
     outline: none;
     appearance: none;
 }
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    color: var(--accent);
+    opacity: 0.6;
+    cursor: pointer;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
 .form-input::placeholder,
 .form-textarea::placeholder { color: #b0b8c8; }
 .form-input:focus,
@@ -269,9 +277,49 @@
     margin-top: 8px;
     line-height: 1.7;
 }
+.form-error-box {
+    background: #FFF5F5;
+    border: 1px solid #FC8181;
+    border-left: 4px solid #E53E3E;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: #C53030;
+    line-height: 2;
+}
+.input-error {
+    border-color: #FC8181 !important;
+    background: #FFF5F5 !important;
+    box-shadow: 0 0 0 3px rgba(229,62,62,0.12) !important;
+}
 .submit-note {
     font-size: 12px; color: var(--text-light);
     margin-top: 16px; line-height: 1.8;
+}
+.submit-complete {
+    text-align: center;
+    padding: 60px 20px;
+}
+.submit-complete-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    margin: 0 auto 32px;
+}
+.submit-complete h2 {
+    font-size: 24px; font-weight: 900;
+    color: var(--primary); margin-bottom: 20px;
+}
+.submit-complete p {
+    font-size: 15px; color: var(--text-light);
+    line-height: 1.9; margin-bottom: 8px;
+}
+.submit-complete-note {
+    font-size: 12px; color: var(--text-light);
+    opacity: 0.7; margin-top: 16px;
 }
 
 /* ===========================
@@ -326,7 +374,7 @@
 
 .faq-question {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 14px 0;
@@ -352,6 +400,7 @@
 .faq-item.open .faq-question { color: var(--white); }
 
 .faq-arrow {
+    margin-left: auto;
     font-size: 18px;
     font-weight: 700;
     color: #7EC8E3;

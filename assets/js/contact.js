@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
             typeCards.forEach(c => c.classList.remove('active'));
             card.classList.add('active');
 
+            // エラー表示をリセット
+            const errorBox = form ? form.querySelector('.form-error-box') : null;
+            if (errorBox) errorBox.remove();
+            document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+
             const type = card.getAttribute('data-type');
             const config = typeConfig[type];
 
@@ -59,9 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.display = type === 'consultation' ? 'block' : 'none';
             });
 
-            // テキストエリアの必須制御
-            const message = document.getElementById('message');
-            message.required = type === 'general';
+            // consultation-only内のrequired制御
+            document.querySelectorAll('.consultation-only [required]').forEach(input => {
+                if (type === 'consultation') {
+                    input.setAttribute('required', '');
+                } else {
+                    input.removeAttribute('required');
+                }
+            });
+
         });
     });
 
@@ -87,14 +98,161 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 日時ピッカー（flatpickr）---
+    const dateConfig = {
+        locale: 'ja',
+        enableTime: true,
+        dateFormat: 'Y年m月d日 H:i',
+        minuteIncrement: 30,
+        minDate: 'today',
+        time_24hr: true,
+        disableMobile: true,
+    };
+
+    flatpickr('#date1', dateConfig);
+    flatpickr('#date2', dateConfig);   
+
     // --- フォーム送信（仮） ---
     const form = document.getElementById('contactForm');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            // ここに実際の送信処理を実装
-            alert('送信が完了しました。\n2営業日以内にご返信いたします。');
-            form.reset();
+
+            const errors = [];
+            const checkedGroups = [];
+
+            // 現在表示されている要素かどうか判定
+            const isVisible = (el) => {
+                let node = el;
+                while (node && node !== form) {
+                    const style = window.getComputedStyle(node);
+                    if (style.display === 'none') return false;
+                    node = node.parentElement;
+                }
+                return true;
+            };
+
+            // 現在の種別を取得
+            const activeType = document.querySelector('.type-card.active')?.getAttribute('data-type');
+
+            // 共通必須項目
+            const commonRequired = [
+                { id: 'company',  label: '会社名' },
+                { id: 'name',     label: '氏名' },
+                { id: 'email',    label: 'メールアドレス' },
+                { id: 'tel',      label: '電話番号' },
+            ];
+
+            // 種別ごとの必須項目
+            const typeRequired = {
+                general: [
+                    { id: 'message', label: 'お問い合わせ内容' },
+                ],
+                estimate: [
+                    { id: 'headcount', label: 'お申し込み人数' },
+                ],
+                consultation: [
+                    { id: 'date1',            label: '【第一希望】実施日時' },
+                    { id: 'date2',            label: '【第二希望】実施日時' },
+                    { id: 'consultHeadcount', label: '従業員数' },
+                    { id: 'consultBiz',       label: '事業内容' },
+                ],
+            };
+
+            // チェックボックスグループの必須項目
+            const checkboxRequired = {
+                estimate: [
+                    { name: 'service', label: 'ご希望のサービス' },
+                ],
+                consultation: [
+                    { name: 'consultService', label: 'ご希望のサービス' },
+                ],
+            };
+
+            // テキスト系入力チェック
+            const checkInput = (id, label) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                if (el.value.trim() === '') {
+                    errors.push(`・${label}は必須です。`);
+                    el.classList.add('input-error');
+                } else {
+                    el.classList.remove('input-error');
+                }
+            };
+
+            // チェックボックスグループチェック
+            const checkCheckbox = (name, label) => {
+                const checked = form.querySelectorAll(`input[name="${name}"]:checked`);
+                const inputs = form.querySelectorAll(`input[name="${name}"]`);
+                if (checked.length === 0) {
+                    errors.push(`・${label}は必須です。`);
+                    inputs.forEach(el => el.classList.add('input-error'));
+                } else {
+                    inputs.forEach(el => el.classList.remove('input-error'));
+                }
+            };
+
+            // 共通項目チェック
+            commonRequired.forEach(({ id, label }) => checkInput(id, label));
+
+            // 種別ごとの項目チェック
+            (typeRequired[activeType] || []).forEach(({ id, label }) => checkInput(id, label));
+            (checkboxRequired[activeType] || []).forEach(({ name, label }) => checkCheckbox(name, label));
+
+            // プライバシーポリシーチェック
+            const privacy = document.getElementById('privacy');
+            if (privacy && !privacy.checked) {
+                errors.push('・プライバシーポリシーへの同意は必須です。');
+                privacy.classList.add('input-error');
+            } else if (privacy) {
+                privacy.classList.remove('input-error');
+            }
+
+            // エラー表示
+            let errorBox = form.querySelector('.form-error-box');
+            if (errors.length > 0) {
+                if (!errorBox) {
+                    errorBox = document.createElement('div');
+                    errorBox.className = 'form-error-box';
+                    form.prepend(errorBox);
+                }
+                errorBox.innerHTML = errors.join('<br>');
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            } else {
+                if (errorBox) errorBox.remove();
+            }
+
+            // --- 送信処理 ---
+            const submitBtn = form.querySelector('.btn-submit');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '送信中…';
+
+            setTimeout(() => {
+                const formWrapper = document.querySelector('.form-wrapper');
+                formWrapper.innerHTML = `
+                    <div class="submit-complete">
+                        <div class="submit-complete-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h2>送信が完了しました</h2>
+                        <p>お問い合わせいただきありがとうございます。<br>内容を確認のうえ、担当者よりご連絡いたします。</p>
+                        <p class="submit-complete-note">※ 自動返信メールをお送りしております。届かない場合は迷惑メールフォルダをご確認ください。</p>
+                        <a href="../index.html" class="btn" style="margin-top:32px;">トップページへ戻る</a>
+                    </div>
+                `;
+            }, 1500);
+        });
+
+        // 入力時にエラー状態を解除
+        form.addEventListener('input', (e) => {
+            e.target.classList.remove('input-error');
+            const errorBox = form.querySelector('.form-error-box');
+            if (errorBox) errorBox.remove();
         });
     }
 
