@@ -273,7 +273,7 @@ header .container { display: flex; justify-content: space-between; align-items: 
     position: relative;
 }
 .dropdown-sub-wrap:hover > .dropdown-item {
-    background: var(--accent) !important;
+    background: var(--accent) ;
     color: var(--white) !important;
 }
 .dropdown-sub-wrap:hover > .dropdown-item .dropdown-item-arrow {
@@ -298,7 +298,7 @@ header .container { display: flex; justify-content: space-between; align-items: 
     display: none;
     position: absolute;
     top: 0;
-    left: calc(100% + 12px); /* 左列から12px離す */;
+    left: calc(100% + 108px); /* 左列から12px離す */;
     background: var(--white);
     border-top: 3px solid var(--accent);
     border-radius: 8px;
