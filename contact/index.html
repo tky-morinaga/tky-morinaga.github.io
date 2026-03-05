@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>お問い合わせ | IT × ISO Vision</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/common.css">
+        <link rel="stylesheet" href="../assets/css/contact.css">
+    </head>
+<body id="top">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                IT × ISO <span>Vision</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#intro">はじめに</a>
+                <a href="../index.html#about">強みと実績</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <a href="../index.html#services" class="nav-dropdown-toggle">
+                        サービス一覧
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-col">
+                            <div class="dropdown-sub-wrap">
+                                <a href="#" class="dropdown-item">ISO認証審査 <span class="dropdown-item-arrow">›</span></a>
+                                <div class="dropdown-submenu">
+                                    <a href="#" class="submenu-item">スタンダードコース</a>
+                                    <a href="#" class="submenu-item">アドバンスコース</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-sub-wrap">
+                                <a href="#" class="dropdown-item">監査 <span class="dropdown-item-arrow">›</span></a>
+                                <div class="dropdown-submenu">
+                                    <a href="#" class="submenu-item">業務監査</a>
+                                    <a href="#" class="submenu-item">セキュリティ監査</a>
+                                </div>
+                            </div>
+                            <a href="#" class="dropdown-item">ISO関連セミナー一覧</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="../index.html#pricing">料金</a>
+                <div class="nav-dropdown" id="companyDropdown">
+                    <a href="../index.html#company" class="nav-dropdown-toggle">
+                        企業情報
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item">お知らせ</a>
+                            <a href="#" class="dropdown-item">品質基本方針</a>
+                            <a href="#" class="dropdown-item">プライバシーポリシー</a>
+                            <a href="#" class="dropdown-item">サイト利用規約</a>
+                            <a href="#" class="dropdown-item">インボイス制度 適格請求書発行事業者情報</a>
+                            <a href="#" class="dropdown-item">採用情報</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-nav btn-dl">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>資料ダウンロード
+                </a>
+                <a href="index.html" class="btn btn-nav btn-orange">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:6px;"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>お問い合わせ
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- モバイルメニュー -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html#intro">はじめに</a>
+            <a href="../index.html#about">強みと実績</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle" id="mobileDropdownToggle">
+                    <span>サービス一覧</span>
+                    <svg class="mobile-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mobile-dropdown-menu">
+                    <div class="mobile-sub-wrap">
+                        <button class="mobile-sub-toggle">ISO認証審査 <span class="mobile-sub-arrow">›</span></button>
+                        <div class="mobile-sub-menu">
+                            <a href="#">スタンダードコース</a>
+                            <a href="#">アドバンスコース</a>
+                        </div>
+                    </div>
+                    <div class="mobile-sub-wrap">
+                        <button class="mobile-sub-toggle">監査 <span class="mobile-sub-arrow">›</span></button>
+                        <div class="mobile-sub-menu">
+                            <a href="#">業務監査</a>
+                            <a href="#">セキュリティ監査</a>
+                        </div>
+                    </div>
+                    <a href="#">ISO関連セミナー一覧</a>
+                </div>
+            </div>
+            <a href="../index.html#pricing">料金</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">
+                    <span>企業情報</span>
+                    <svg class="mobile-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">お知らせ</a>
+                    <a href="#">品質基本方針</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">サイト利用規約</a>
+                    <a href="#">インボイス制度 適格請求書発行事業者情報</a>
+                    <a href="#">採用情報</a>
+                </div>
+            </div>
+            <a href="#" class="mobile-btn-dl">資料ダウンロード</a>
+            <a href="index.html" class="mobile-btn-orange">お問い合わせ</a>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <p class="page-hero-label fade-in">CONTACT</p>
+                <h1 class="fade-in">お問い合わせ</h1>
+                <p class="fade-in">当社サービスや料金についてご不明な点がございましたら、お気軽にお問い合わせください。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Type -->
+    <section class="contact-type">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="step-num">お問い合わせ種別</span>
+                <h2>ご用件をお選びください</h2>
+                <p>該当するものを選択すると、フォームが切り替わります</p>
+            </div>
+            <div class="type-cards fade-in">
+                <button class="type-card active" data-type="general">
+                    <div class="type-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <span class="type-label">一般お問い合わせ</span>
+                    <span class="type-desc">サービスに関するご質問など</span>
+                </button>
+                <button class="type-card" data-type="estimate">
+                    <div class="type-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <span class="type-label">サービス料金お見積もり</span>
+                    <span class="type-desc">当社サービスの費用を確認したい方</span>
+                </button>
+                <button class="type-card" data-type="consultation">
+                    <div class="type-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <span class="type-label">無料相談お申し込み</span>
+                    <span class="type-desc">当社スタッフによる個別相談</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- Form -->
+                <div class="form-wrapper fade-in">
+                    <div class="form-header">
+                        <h2 id="formTitle">一般お問い合わせ</h2>
+                        <p id="formDesc"></p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="company">会社名 <span class="required">必須</span></label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="株式会社〇〇" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="name">氏名 <span class="required">必須</span></label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="山田 太郎" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="dept">部署名</label>
+                            <input type="text" id="dept" name="dept" class="form-input" placeholder="総務部">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="position">役職</label>
+                            <input type="text" id="position" name="position" class="form-input" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">メールアドレス <span class="required">必須</span></label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="example@company.co.jp" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="tel">電話番号 <span class="required">必須</span></label>
+                            <input type="tel" id="tel" name="tel" class="form-input" placeholder="半角数字+半角ハイフンで入力してください">
+                        </div>
+                        
+                        <!-- 料金お見積もりのみ表示 -->
+                        <div class="estimate-only" style="display:none;">
+                            <div class="form-group">
+                                <label class="form-label">ご希望のサービス（複数選択可） <span class="required">必須</span></label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="service" value="iso-audit">
+                                        <span>ISO認証審査サービス</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="service" value="review">
+                                        <span>監査サービス</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="service" value="webmics">
+                                        <span>WebMiCS</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="service" value="seminar">
+                                        <span>ISO関連セミナー</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="headcount">お申し込み人数 <span class="required">必須</span></label>
+                                <input type="text" id="headcount" name="headcount" class="form-input" placeholder="">
+                                <p class="form-note">※ISO認証審査サービス選択の場合、認証範囲となる従業員数をご記入ください</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">ISO規格（複数選択可）</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="isoType" value="9001">
+                                        <span>【ISO 9001】QMS・品質マネジメントシステム</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="isoType" value="14001">
+                                        <span>【ISO 14001】EMS・環境マネジメントシステム</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="isoType" value="27001">
+                                        <span>【ISO/IEC 27001】ISMS・情報セキュリティマネジメントシステム</span>
+                                    </label>
+                                </div>
+                                <p class="form-note">※ISO認証審査サービス選択の場合必須</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">お客様のご状況</label>
+                                <div class="radio-group">
+                                    <label class="radio-item">
+                                        <input type="radio" name="status" value="first">
+                                        <span>初めて審査を受ける</span>
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="status" value="existing">
+                                        <span>すでに認証を取得している</span>
+                                    </label>
+                                </div>
+                                <p class="form-note">※ISO認証審査サービス選択の場合必須</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="siteCount">事業所数</label>
+                                <input type="text" id="siteCount" name="siteCount" class="form-input" placeholder="">
+                                <p class="form-note">※ISO認証審査サービス選択の場合必須　※認証範囲となる事業所の数をご記入ください</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="courseName">希望する講座の内容</label>
+                                <input type="text" id="courseName" name="courseName" class="form-input" placeholder="内部監査員養成セミナー">
+                                <p class="form-note">※ISO関連セミナー選択の場合必須　※受講予定の講座名をご記入ください</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="bizContent">事業内容</label>
+                                <textarea id="bizContent" name="bizContent" class="form-textarea" rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="ourStaff">弊社担当（わかる場合）</label>
+                                <input type="text" id="ourStaff" name="ourStaff" class="form-input" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="freeComment">ご意見・ご不明点等ございましたらご記入ください</label>
+                                <textarea id="freeComment" name="freeComment" class="form-textarea" rows="4"></textarea>
+                            </div>
+
+                        </div>
+
+                        <!-- 無料相談のみ表示 -->
+                        <div class="consultation-only" style="display:none;">
+
+                            <div class="form-group">
+                                <label class="form-label" for="date1">【第一希望】実施日時 <span class="required">必須</span></label>
+                                <input type="text" id="date1" name="date1" class="form-input" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="date2">【第二希望】実施日時 <span class="required">必須</span></label>
+                                <input type="text" id="date2" name="date2" class="form-input" placeholder="" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">ご希望のサービス <span class="required">必須</span></label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="consultService" value="iso-audit">
+                                        <span>ISO認証審査サービス</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="consultService" value="review">
+                                        <span>監査サービス</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="consultHeadcount">従業員数 <span class="required">必須</span></label>
+                                <input type="text" id="consultHeadcount" name="consultHeadcount" class="form-input" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="consultBiz">事業内容 <span class="required">必須</span></label>
+                                <textarea id="consultBiz" name="consultBiz" class="form-textarea" rows="3"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">ご取得希望のISO規格</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="consultIso" value="9001">
+                                        <span>ISO9001（品質マネジメントシステム）</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="consultIso" value="14001">
+                                        <span>ISO14001（環境マネジメントシステム）</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="consultIso" value="27001">
+                                        <span>ISO/IEC27001（情報セキュリティマネジメントシステム）</span>
+                                    </label>
+                                </div>
+                                <p class="form-note">※ISO認証審査サービス選択の場合必須</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">お客様のご状況</label>
+                                <div class="radio-group">
+                                    <label class="radio-item">
+                                        <input type="radio" name="consultStatus" value="first">
+                                        <span>初めて審査を受ける</span>
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="consultStatus" value="existing">
+                                        <span>すでに認証を取得している</span>
+                                    </label>
+                                </div>
+                                <p class="form-note">※ISO認証審査サービス選択の場合必須</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="consultSiteCount">事業所数</label>
+                                <input type="text" id="consultSiteCount" name="consultSiteCount" class="form-input" placeholder="">
+                                <p class="form-note">※ISO認証審査サービス選択の場合必須</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="consultStaff">弊社担当（わかる場合）</label>
+                                <input type="text" id="consultStaff" name="consultStaff" class="form-input" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="consultComment">ご意見・ご不明点等ございましたらご記入ください</label>
+                                <textarea id="consultComment" name="consultComment" class="form-textarea" rows="4"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group general-only">
+                            <label class="form-label" for="iso">お問い合わせタイプ</label>
+                            <div class="select-wrapper">
+                                <select id="iso" name="iso" class="form-select">
+                                    <option value="">選択してください</option>
+                                    <option value="iso-audit">ISO認証審査</option>
+                                    <option value="review">監査</option>
+                                    <option value="webmics">WebMiCS</option>
+                                    <option value="seminar">ISO関連セミナー</option>
+                                    <option value="other">その他</option>
+                                </select>
+                                <span class="select-arrow">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group general-only">
+                            <label class="form-label" for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="ご質問・ご相談内容をご記入ください。" required></textarea>
+                        </div>
+
+                        <div class="form-group general-only">
+                            <label class="form-label" for="how">当社を知ったきっかけ</label>
+                            <div class="select-wrapper">
+                                <select id="how" name="how" class="form-select">
+                                    <option value="">選択してください</option>
+                                    <option value="search">検索エンジン</option>
+                                    <option value="">当社からの紹介</option>
+                                    <option value="introduce">知人・取引先からの紹介</option>
+                                    <option value="seminar">セミナー</option>
+                                    <option value="other">その他</option>
+                                </select>
+                                <span class="select-arrow">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group general-only" id="howOtherWrap" style="display:none;">
+                            <label class="form-label" for="howOther">その他の内容</label>
+                            <input type="text" id="howOther" name="howOther" class="form-input" placeholder="どのようにお知りになりましたか？">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="privacy-check">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span><a href="#" class="privacy-link">プライバシーポリシー</a>に同意する <span class="required">必須</span></span>
+                            </label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-submit">
+                                送信する
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                            <p class="submit-note">※ 送信後、自動返信メールが届きます。届かない場合は迷惑メールフォルダをご確認ください。</p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="contact-sidebar fade-in">
+                    <div class="sidebar-card">
+                        <div class="sidebar-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h3>お電話でのご相談も承っております</h3>
+                        <p class="sidebar-tel">03-3666-8814</p>
+                        <p class="sidebar-hours">平日 8:30 〜 17:30</p>
+                        <p class="sidebar-note">※ 土日祝日はお休みです</p>
+                    </div>
+
+                    <div class="sidebar-card sidebar-card-accent">
+                        <h3>よくあるご質問</h3>
+                        <div class="faq-accordion">
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>ISO取得にかかる期間は？</span>
+                                    <span class="faq-arrow">›</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>ご状況によって変動しますが、当社が提供しているツールを利用した場合、マネジメントシステムを構築・運用から審査の受審、認証のご登録まで1年ほどで完了します。</p>
+                                    <p class="faq-note">※お客様によって進行度が異なる場合がございます。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>費用はどのくらいかかりますか？</span>
+                                    <span class="faq-arrow">›</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>費用はご希望のサービス内容や規模によって異なります。詳しくはお見積もりフォームよりお気軽にご相談ください。担当者より個別にご案内いたします。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>中小企業でもISO取得できますか？</span>
+                                    <span class="faq-arrow">›</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>はい、取得いただけます。一昔前のISO規格は要求事項や必要な文書が多く、大企業向けの内容で中小企業での運用は難しいものでした。しかし、現在のISO規格は改訂を経て、組織運営のマネジメントツールとして有効な内容になっております。</p>
+                                    <p>当社では、組織に必要な仕組みや課題の早期発見・解決に役立つツールとして、ISO認証を中小企業のお客様にご活用いただきたいと考えております。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>取得後の更新審査について</span>
+                                    <span class="faq-arrow">›</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>認証のご取得後も導入したマネジメントシステムの運用・改善を続けていただき、1年に一回審査を受審する必要があります。</p>
+                                    <p>当社が提供しているセミナーでは内部監査員養成セミナー、規格の改訂内容の解説セミナーなど、認証取得後も活用できるコンテンツをご用意しております。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>監査とISO認証審査の違いは</span>
+                                    <span class="faq-arrow">›</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>監査サービスは、当社独自のサービスで、社内の仕組みやルールを評価するものです。監査の内容を一部のプロセスや部署に限定することや、審査内容をカスタマイズすることができます。</p>
+                                    <p>一方でISO認証審査は、国際標準化機構が定めたISO規格に対してその基準を満たしているかどうかを評価するものです。認証機関からの認証の登録をもって、ISO認証の取得が認められます。</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <a href="../index.html" class="footer-logo">
+                        IT × ISO <span>Vision</span>
+                    </a>
+                    <p>お客様の経営改善を支えるパートナーに。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Vision</h4>
+                        <a href="../index.html#intro">はじめに</a>
+                        <a href="../index.html#about">強みと実績</a>
+                        <a href="../index.html#services">サービス一覧</a>
+                        <a href="../index.html#pricing">料金</a>
+                        <a href="../index.html#company">会社概要</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <a href="#">資料請求</a>
+                        <a href="index.html">お問い合わせ</a>
+                        <a href="#">プライバシーポリシー</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; ARM Standard Co., Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>
