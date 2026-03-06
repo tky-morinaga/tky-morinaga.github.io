@@ -27,7 +27,7 @@
                                 <a href="#" class="submenu-item">セキュリティ監査</a>
                             </div>
                         </div>
-                        <a href="#" class="dropdown-item">ISO関連セミナー一覧</a>
+                        <a href="#" class="dropdown-item">ISO関連セミナー</a>
                     </div>
                 </div>
             </div>
@@ -39,11 +39,11 @@
                 </a>
                 <div class="dropdown-menu">
                     <div class="dropdown-col">
-                        <a href="#" class="dropdown-item">お知らせ</a>
+                        <a href="#" class="dropdown-item">会社概要</a>
                         <a href="#" class="dropdown-item">品質基本方針</a>
                         <a href="/privacy/index.html" class="dropdown-item">プライバシーポリシー</a>
                         <a href="/terms/index.html" class="dropdown-item">サイト利用規約</a>
-                        <a href="#" class="dropdown-item">インボイス制度 適格請求書発行事業者情報</a>
+                        <a href="/invoice/index.html" class="dropdown-item">インボイス制度 適格請求書発行事業者情報</a>
                         <a href="#" class="dropdown-item">採用情報</a>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         <a href="#">セキュリティ監査</a>
                     </div>
                 </div>
-                <a href="#">ISO関連セミナー一覧</a>
+                <a href="#">ISO関連セミナー</a>
             </div>
         </div>
         <a href="/index.html#pricing">料金</a>
@@ -97,7 +97,7 @@
                 <a href="#">品質基本方針</a>
                 <a href="/privacy/index.html">プライバシーポリシー</a>
                 <a href="/terms/index.html">サイト利用規約</a>
-                <a href="#">インボイス制度 適格請求書発行事業者情報</a>
+                <a href="/invoice/index.html">インボイス制度 適格請求書発行事業者情報</a>
                 <a href="#">採用情報</a>
             </div>
         </div>
