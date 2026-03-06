@@ -3,7 +3,22 @@
    ※ このファイルは全ページで読み込む
    ============================================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+
+    // --- Header / Footer 共通パーツ読み込み ---
+    const insertHTML = async (selector, url) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+        const res = await fetch(url);
+        el.outerHTML = await res.text();
+    };
+
+    await Promise.all([
+        insertHTML('#header-placeholder', '/assets/html/header.inc'),
+        insertHTML('#footer-placeholder', '/assets/html/footer.inc'),
+    ]);
+
+    // ↓ fetch完了後に各種初期化を実行
 
     // --- Intersection Observer for Fade-in ---
     const observer = new IntersectionObserver((entries) => {
@@ -20,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Header Scroll Effect ---
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 100);
+        if (header) header.classList.toggle('scrolled', window.scrollY > 100);
     });
 
 
@@ -70,6 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', () => {
             toggle.closest('.mobile-dropdown').classList.toggle('open');
+        });
+    });
+
+    // --- Mobile Sub Menu（複数対応）---
+    document.querySelectorAll('.mobile-sub-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            toggle.closest('.mobile-sub-wrap').classList.toggle('open');
         });
     });
 

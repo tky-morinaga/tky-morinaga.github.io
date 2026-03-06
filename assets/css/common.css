@@ -141,7 +141,13 @@ header.scrolled {
 header.scrolled .logo,
 header.scrolled .nav-links a { color: var(--primary); }
 header.scrolled .nav-links a.btn-nav { color: var(--white); }
-header .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+header .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px; 
+}
 
 .logo {
     text-decoration: none; font-weight: 900; font-size: 24px;
