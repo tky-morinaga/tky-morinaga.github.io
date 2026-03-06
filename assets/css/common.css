@@ -518,6 +518,36 @@ footer { background-color: var(--primary); color: var(--white); padding: 80px 0 
 .footer-logo:hover { opacity: 0.5; }
 .footer-info p { opacity: 0.6; font-size: 14px; }
 .footer-links { display: flex; gap: 60px; }
+
+/* サブリンク横並び行 */
+.footer-sub-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 0;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 0;
+}
+.footer-sub-links a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 0 2px;
+}
+.footer-sub-links a:visited {
+    color: rgba(255,255,255,0.55);
+}
+.footer-sub-links a:hover {
+    color: var(--white);
+}
+.footer-sub-sep {
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    padding: 0 10px;
+    user-select: none;
+}
 .link-group h4 { margin-bottom: 20px; font-size: 16px; }
 .link-group a {
     display: block; color: var(--white); text-decoration: none;

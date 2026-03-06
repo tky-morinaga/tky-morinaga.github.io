@@ -204,6 +204,48 @@
 }
 
 /* ===========================
+   Invoice（インボイス専用）
+   =========================== */
+.invoice-info-box {
+    background: var(--accent-light);
+    border: 1px solid #c5d8f7;
+    border-radius: 10px;
+    padding: 40px 48px;
+    margin: 28px 0 0;
+}
+.invoice-dl {
+    display: grid;
+    gap: 0;
+}
+.invoice-dl-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid #d8e8f8;
+}
+.invoice-dl-row:last-child {
+    border-bottom: none;
+}
+.invoice-dl dt {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+}
+.invoice-dl dd {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary);
+    margin: 0;
+}
+.invoice-number {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+}
+
+/* ===========================
    Responsive
    =========================== */
 @media (max-width: 600px) {
@@ -213,4 +255,12 @@
     .privacy-h2 {
         font-size: 17px;
     }
+    .invoice-info-box {
+        padding: 24px 20px;
+    }
+    .invoice-dl-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 14px 0;
+    }    
 }
