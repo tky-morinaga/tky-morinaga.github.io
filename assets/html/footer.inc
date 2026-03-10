@@ -22,10 +22,10 @@
                 </div>
                 <div class="link-group">
                     <h4>Company</h4>
-                    <a href="#">会社概要</a><!-- ※未実装 -->
+                    <a href="/company/index.html">企業情報</a>
                     <a href="#">お知らせ</a><!-- ※未実装 -->
                     <a href="https://ferret-one.akamaized.net/files/692d0000f5727391b6a8031c/ArmS-Certification-Regulation.pdf?utime=1764556800" target="_blank">審査登録規則</a><!-- ※未実装 -->
-                    <a href="#">採用情報</a><!-- ※未実装 -->
+                    <a href="/recruit/index.html">採用情報</a>
                 </div>
                 <div class="link-group">
                     <h4>Contact</h4>

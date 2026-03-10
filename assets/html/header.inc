@@ -25,26 +25,29 @@
                             <div class="dropdown-submenu">
                                 <a href="#" class="submenu-item">業務監査</a>
                                 <a href="#" class="submenu-item">セキュリティ監査</a>
+                                <a href="#" class="submenu-item">情報セキュリティ簡易診断</a>                                
                             </div>
                         </div>
+                        <a href="#" class="dropdown-item">内部監査代行サービス</a>
+                        <a href="#" class="dropdown-item">WebMiCS</a>                    
                         <a href="#" class="dropdown-item">ISO関連セミナー</a>
                     </div>
                 </div>
             </div>
             <a href="/index.html#pricing">料金</a>
             <div class="nav-dropdown">
-                <a href="/index.html#company" class="nav-dropdown-toggle">
+                <a href="/company/index.html" class="nav-dropdown-toggle">
                     企業情報
                     <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
                 </a>
                 <div class="dropdown-menu">
                     <div class="dropdown-col">
-                        <a href="#" class="dropdown-item">会社概要</a>
+                        <a href="#" class="dropdown-item">お知らせ</a>
                         <a href="#" class="dropdown-item">品質基本方針</a>
                         <a href="/privacy/index.html" class="dropdown-item">プライバシーポリシー</a>
                         <a href="/terms/index.html" class="dropdown-item">サイト利用規約</a>
                         <a href="/invoice/index.html" class="dropdown-item">インボイス制度 適格請求書発行事業者情報</a>
-                        <a href="#" class="dropdown-item">採用情報</a>
+                        <a href="/recruit/index.html" class="dropdown-item">採用情報</a>
                     </div>
                 </div>
             </div>
@@ -81,8 +84,11 @@
                     <div class="mobile-sub-menu">
                         <a href="#">業務監査</a>
                         <a href="#">セキュリティ監査</a>
+                        <a href="#">情報セキュリティ簡易診断</a>
                     </div>
                 </div>
+                <a href="#">内部監査代行サービス</a>
+                <a href="#">WebMiCS</a>
                 <a href="#">ISO関連セミナー</a>
             </div>
         </div>
@@ -93,12 +99,13 @@
                 <svg class="mobile-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
             </button>
             <div class="mobile-dropdown-menu">
+                <a href="/company/index.html">企業情報</a>
                 <a href="#">お知らせ</a>
                 <a href="#">品質基本方針</a>
                 <a href="/privacy/index.html">プライバシーポリシー</a>
                 <a href="/terms/index.html">サイト利用規約</a>
                 <a href="/invoice/index.html">インボイス制度 適格請求書発行事業者情報</a>
-                <a href="#">採用情報</a>
+                <a href="/recruit/index.html">採用情報</a>
             </div>
         </div>
         <a href="#" class="mobile-btn-dl">資料ダウンロード</a>
