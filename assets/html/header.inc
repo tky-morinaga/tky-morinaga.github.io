@@ -43,7 +43,7 @@
                 <div class="dropdown-menu">
                     <div class="dropdown-col">
                         <a href="#" class="dropdown-item">お知らせ</a>
-                        <a href="#" class="dropdown-item">品質基本方針</a>
+                        <a href="/policy/index.html" class="dropdown-item">品質基本方針</a>
                         <a href="/privacy/index.html" class="dropdown-item">プライバシーポリシー</a>
                         <a href="/terms/index.html" class="dropdown-item">サイト利用規約</a>
                         <a href="/invoice/index.html" class="dropdown-item">インボイス制度 適格請求書発行事業者情報</a>
@@ -99,9 +99,9 @@
                 <svg class="mobile-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
             </button>
             <div class="mobile-dropdown-menu">
-                <a href="/company/index.html">企業情報</a>
+                <a href="/company/index.html">会社概要</a>
                 <a href="#">お知らせ</a>
-                <a href="#">品質基本方針</a>
+                <a href="/policy/index.html">品質基本方針</a>
                 <a href="/privacy/index.html">プライバシーポリシー</a>
                 <a href="/terms/index.html">サイト利用規約</a>
                 <a href="/invoice/index.html">インボイス制度 適格請求書発行事業者情報</a>

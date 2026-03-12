@@ -1,0 +1,245 @@
+/* ============================================================
+   policy.css — 品質基本方針ページ専用スタイル
+   ※ common.css を読み込んだ後に読み込む
+   ============================================================ */
+
+/* ===========================
+   Page Hero
+   =========================== */
+.page-hero {
+    min-height: 320px;
+    background: linear-gradient(135deg, #0B1F3A 0%, #1a3a5f 100%);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding: 140px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+.page-hero-bg {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47,128,237,0.15) 0%, transparent 70%);
+    top: 50%; right: -100px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.page-hero-content { position: relative; z-index: 1; }
+.page-hero-label {
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.4em; opacity: 0.5;
+    margin-bottom: 16px; display: block;
+}
+.page-hero h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 900; margin-bottom: 20px;
+    line-height: 1.3;
+}
+.page-hero p {
+    font-size: 15px; opacity: 0.75;
+    line-height: 1.9; font-weight: 300;
+}
+
+/* ===========================
+   Policy Section
+   =========================== */
+.policy-section {
+    padding: 80px 0 120px;
+    background: var(--bg);
+}
+
+/* ===========================
+   本文エリア
+   =========================== */
+.policy-body {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 60px 56px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+
+.policy-block {
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #edf2f7;
+}
+.policy-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* ===========================
+   見出し
+   =========================== */
+.policy-h2 {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 24px;
+    line-height: 1.4;
+    padding-left: 16px;
+    border-left: 4px solid var(--accent);
+}
+
+/* ===========================
+   本文テキスト
+   =========================== */
+.policy-block p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 2;
+    margin-bottom: 16px;
+}
+.policy-block p:last-child { margin-bottom: 0; }
+
+/* ===========================
+   番号付きリスト
+   =========================== */
+.policy-ol {
+    padding-left: 0;
+    margin: 16px 0 0;
+    list-style: none;
+    counter-reset: policy-counter;
+}
+.policy-ol li {
+    counter-increment: policy-counter;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.9;
+    padding: 10px 0 10px 44px;
+    position: relative;
+    border-bottom: 1px solid #f5f7fa;
+}
+.policy-ol li:last-child { border-bottom: none; }
+.policy-ol li::before {
+    content: counter(policy-counter);
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 24px; height: 24px;
+    background-color: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ===========================
+   箇条書きリスト
+   =========================== */
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+.policy-list li {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.9;
+    padding: 8px 0 8px 24px;
+    position: relative;
+    border-bottom: 1px solid #f5f7fa;
+}
+.policy-list li:last-child { border-bottom: none; }
+.policy-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+/* ===========================
+   ボタン配置
+   =========================== */
+.policy-btn-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.policy-btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 16px 32px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.policy-btn-grid .btn {
+    min-width: 220px;
+    text-align: center;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 992px) {
+    .policy-body {
+        padding: 48px 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .policy-body {
+        padding: 32px 20px;
+    }
+    .policy-h2 {
+        font-size: 17px;
+    }
+    .policy-btn-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        justify-items: center;
+    }
+    .policy-btn-grid .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ===========================
+   ダッシュリスト（― 始まり）
+   =========================== */
+.policy-dash-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+}
+.policy-dash-list li {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.9;
+    padding: 12px 0 12px 2em;
+    position: relative;
+    border-bottom: 1px solid #f5f7fa;
+}
+.policy-dash-list li:last-child { border-bottom: none; }
+.policy-dash-list li::before {
+    content: "―";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ===========================
+   署名欄
+   =========================== */
+.policy-signature {
+    margin-top: 48px;
+    text-align: right;
+}
+.policy-signature p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 2;
+    margin-bottom: 0 !important;
+}
