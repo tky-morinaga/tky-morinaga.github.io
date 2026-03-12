@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="footer-sub-links">
-            <a href="#">品質基本方針</a><!-- ※未実装 -->
+            <a href="/policy/index.html">品質基本方針</a><!-- ※未実装 -->
             <span class="footer-sub-sep">|</span>
             <a href="/terms/index.html">サイト利用規約</a>
             <span class="footer-sub-sep">|</span>
