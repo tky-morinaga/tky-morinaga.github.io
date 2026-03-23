@@ -4,10 +4,8 @@
             IT × ISO <span>Vision</span>
         </a>
         <nav class="nav-links">
-            <a href="/index.html#intro">はじめに</a>
-            <a href="/index.html#about">強みと実績</a>
             <div class="nav-dropdown">
-                <a href="/index.html#services" class="nav-dropdown-toggle">
+                <a href="/services/index.html" class="nav-dropdown-toggle">
                     サービス一覧
                     <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
                 </a>
@@ -64,8 +62,6 @@
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
-        <a href="/index.html#intro">はじめに</a>
-        <a href="/index.html#about">強みと実績</a>
         <div class="mobile-dropdown">
             <button class="mobile-dropdown-toggle">
                 <span>サービス一覧</span>

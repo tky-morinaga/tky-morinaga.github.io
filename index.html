@@ -15,117 +15,249 @@
     <!-- Header -->
     <div id="header-placeholder"></div>
 
-    <!-- ========== Hero ========== -->
-    <section class="hero">
-        <div class="hero-bg-decoration"></div>
-        <div class="container hero-content">
-            <div class="hero-label fade-in">Management Innovation for Japan</div>
-            <h1 class="fade-in">マネジメントの第一歩を、<br><span>ISOから始める</span>という選択。</h1>
-            <p class="fade-in">組織を動かし、成長を続けるための仕組みをつくる。<br>それが、私たちの提供する価値です。</p>
+    <!-- ========== Hero: 診断インタラクション ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-grid-lines"></div>
 
-            <div class="hero-paths fade-in">
-                <a href="#empathy" class="path-card path-a">
-                    <span class="path-label">まず認証だけ取りたい</span>
-                    <span class="path-desc">コストを抑えて、<br>最短で取得したい方へ</span>
-                    <span class="path-arrow">→</span>
-                </a>
-                <a href="#services" class="path-card path-b">
-                    <span class="path-label">ISOをマネジメントに活かしたい</span>
-                    <span class="path-desc">形骸化を解消し、<br>組織改善に繋げたい方へ</span>
-                    <span class="path-arrow">→</span>
-                </a>
-                <a href="#vision" class="path-card path-c">
-                    <span class="path-label">もっとマネジメントを強化したい</span>
-                    <span class="path-desc">監査・WebMiCS2で、<br>さらに組織を伸ばしたい方へ</span>
-                    <span class="path-arrow">→</span>
-                </a>
+        <div class="container hero-inner">
+            <!-- 左：コピー＋診断 -->
+            <div class="hero-left">
+                <p class="hero-eyebrow fade-in">Management Innovation for Japan</p>
+                <h1 class="hero-title fade-in">
+                    <span class="hero-title-main">マネジメントの<br>第一歩を、<br>
+                    <span class="hero-accent">ISOから始める</span><br>という選択。</span>
+                </h1>
+                <p class="hero-sub fade-in">ISO・マネジメントへの関わり方は、企業ごとに異なります。<br>あてはまるものを選ぶと、最適な情報をご案内します。</p>
+
+                <!-- 診断カード -->
+                <div class="phase-selector fade-in" id="phaseSelector">
+                    <button class="phase-btn" data-phase="a">
+                        <span class="phase-btn-num">01</span>
+                        <span class="phase-btn-body">
+                            <strong>まず認証だけ取りたい</strong>
+                            <small>コストを抑えて最短で取得したい</small>
+                        </span>
+                        <span class="phase-btn-arrow">→</span>
+                    </button>
+                    <button class="phase-btn" data-phase="b">
+                        <span class="phase-btn-num">02</span>
+                        <span class="phase-btn-body">
+                            <strong>ISOをマネジメントに活かしたい</strong>
+                            <small>形骸化を解消し組織改善に繋げたい</small>
+                        </span>
+                        <span class="phase-btn-arrow">→</span>
+                    </button>
+                    <button class="phase-btn" data-phase="c">
+                        <span class="phase-btn-num">03</span>
+                        <span class="phase-btn-body">
+                            <strong>もっとマネジメントを強化したい</strong>
+                            <small>監査・WebMiCSでさらに組織を伸ばしたい</small>
+                        </span>
+                        <span class="phase-btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <div class="hero-btns fade-in">
+                    <a href="#intro" class="btn-text-link">マネジメントとは何かを知る <span>↓</span></a>
+                    <a href="/contact/index.html" class="btn btn-orange">まずは相談してみる</a>
+                </div>
             </div>
 
-            <div class="hero-btns fade-in">
-                <a href="#intro" class="btn">マネジメントとは何かを知る</a>
-                <a href="/contact/index.html" class="btn btn-outline">まずは相談してみる</a>
+            <!-- 右：フェーズ別レスポンスパネル -->
+            <div class="hero-right fade-in">
+                <div class="phase-panel" id="phasePanel">
+                    <!-- default -->
+                    <div class="phase-panel-default" id="phasePanelDefault">
+                        <div class="panel-label">YOUR SITUATION</div>
+                        <p class="panel-prompt">01～03いずれかを選択すると<br>貴社に合った情報が表示されます</p>
+                        <div class="panel-stats">
+                            <div class="panel-stat">
+                                <span class="panel-stat-num"><small>約</small>6,000<small>社</small></span>
+                                <span class="panel-stat-label">グループ合計登録組織数</span>
+                            </div>
+                            <div class="panel-stat">
+                                <span class="panel-stat-num"><small>第</small>3<small>位</small></span>
+                                <span class="panel-stat-label">国内審査実績シェア</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- phase A -->
+                    <div class="phase-panel-content hidden" id="phaseA">
+                        <div class="panel-label">PHASE 01 — 認証取得</div>
+                        <h3 class="panel-title">最短・低負担での<br>ISO取得を支援します</h3>
+                        <ul class="panel-list">
+                            <li>ISO9001 / 14001 / 27001 に対応</li>
+                            <li>スタンダードコースで負担を最小化</li>
+                            <li>文書管理ツール WebMiCS が標準付属</li>
+                            <li>年間20万円前後〜のご提案も可能</li>
+                        </ul>
+                        <a href="#services" class="panel-cta">サービス詳細を見る →</a>
+                    </div>
+
+                    <!-- phase B -->
+                    <div class="phase-panel-content hidden" id="phaseB">
+                        <div class="panel-label">PHASE 02 — 組織改善</div>
+                        <h3 class="panel-title">ISOを「成長の仕組み」に<br>変えるサポートを</h3>
+                        <ul class="panel-list">
+                            <li>形骸化した運用の立て直し支援</li>
+                            <li>PDCAが自然に根づく審査プロセス</li>
+                            <li>詳細版レポートで深い組織改善</li>
+                            <li>選べる4つのオプション審査</li>
+                        </ul>
+                        <a href="#services" class="panel-cta">サービス詳細を見る →</a>
+                    </div>
+
+                    <!-- phase C -->
+                    <div class="phase-panel-content hidden" id="phaseC">
+                        <div class="panel-label">PHASE 03 — マネジメント強化</div>
+                        <h3 class="panel-title">監査×ITツールで<br>組織を次のステージへ</h3>
+                        <ul class="panel-list">
+                            <li>業務監査・セキュリティ監査</li>
+                            <li>情報セキュリティ簡易診断</li>
+                            <li>WebMiCS2 で文書・記録を一元管理</li>
+                            <li>AI分析による改善ポイントの可視化</li>
+                        </ul>
+                        <a href="#services" class="panel-cta">サービス詳細を見る →</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-scroll"></div>
     </section>
+
+    <!-- ========== 進行バー（現在地ナビ） ========== -->
+    <nav class="journey-nav" id="journeyNav">
+        <div class="container journey-nav-inner">
+            <div class="journey-steps">
+                <a href="#intro" class="journey-step" data-section="intro">
+                    <span class="journey-step-num">00</span>
+                    <span class="journey-step-name">マネジメントとは</span>
+                </a>
+                <div class="journey-sep"></div>
+                <a href="#empathy" class="journey-step" data-section="empathy">
+                    <span class="journey-step-num">01</span>
+                    <span class="journey-step-name">課題の確認</span>
+                </a>
+                <div class="journey-sep"></div>
+                <a href="#iso-intro" class="journey-step" data-section="iso-intro">
+                    <span class="journey-step-num">02</span>
+                    <span class="journey-step-name">ISOという手段</span>
+                </a>
+                <div class="journey-sep"></div>
+                <a href="#services" class="journey-step" data-section="services">
+                    <span class="journey-step-num">03</span>
+                    <span class="journey-step-name">サービス</span>
+                </a>
+                <div class="journey-sep"></div>
+                <a href="#vision" class="journey-step" data-section="vision">
+                    <span class="journey-step-num">04</span>
+                    <span class="journey-step-name">企業の将来像</span>
+                </a>
+                <div class="journey-sep"></div>
+                <a href="#about" class="journey-step" data-section="about">
+                    <span class="journey-step-num">05</span>
+                    <span class="journey-step-name">信頼と実績</span>
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <!-- ========== 00. マネジメントとは ========== -->
     <section class="management" id="intro">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="step-num">00. WHAT IS MANAGEMENT</span>
-                <h2>なぜ今、マネジメントが必要なのか。</h2>
-                <p>多くの企業の「変えたい」を実現するために</p>
+
+            <div class="management-header fade-in">
+                <span class="section-kicker">00 — WHAT IS MANAGEMENT</span>
+                <h2 class="section-title-editorial">なぜ今、<br>マネジメントが<br>必要なのか。</h2>
             </div>
-            <div class="management-intro fade-in">
-                <p>マネジメントとは、組織が目標を達成するために「人・仕事・仕組み」を整える営みです。<br>売上を増やすでも、コストを削るでもなく——<br>成果を上げるために、<strong>次に何をやるかを組織として描き、動かし続けること</strong>。それがマネジメントの本質です。</p>
-            </div>
-            <p class="management-grid-label fade-in">マネジメントに必要な、3つの仕組み</p>
-            <div class="management-grid">
-                <div class="management-card fade-in">
-                    <div class="management-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+
+            <div class="management-body">
+                <div class="management-lead fade-in">
+                    <p>マネジメントとは、組織が目標を達成するために「人・仕事・仕組み」を整える営みです。<br>売上を増やすでも、コストを削るでもなく——<br>成果を上げるために、<strong>次に何をやるかを組織として描き、動かし続けること</strong>。それがマネジメントの本質です。</p>
+                </div>
+
+                <div class="management-pillars fade-in">
+                    <p class="pillars-label">マネジメントに必要な、3つの仕組み</p>
+                    <div class="pillar-item">
+                        <div class="pillar-index">01</div>
+                        <div class="pillar-body">
+                            <h3>業務の標準化</h3>
+                            <p>誰が担当しても同じ品質で業務が回る仕組みをつくる。属人化を解消し、組織の力を安定させる土台です。特定の人に依存しない体制こそが、企業の持続的な成長を支えます。</p>
+                        </div>
                     </div>
-                    <h3>業務の標準化</h3>
-                    <p>誰が担当しても同じ品質で業務が回る仕組みをつくる。属人化を解消し、組織の力を安定させる土台です。特定の人に依存しない体制こそが、企業の持続的な成長を支えます。</p>
-                </div>
-                <div class="management-card fade-in">
-                    <div class="management-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    <div class="pillar-item">
+                        <div class="pillar-index">02</div>
+                        <div class="pillar-body">
+                            <h3>PDCAサイクル</h3>
+                            <p>業務に対して、計画・実行・評価・改善のサイクルを回す。「なんとなく続ける」から「意図して成長する」組織へ。標準化によって原価を確定し、ビジネスモデルを安定させます。</p>
+                        </div>
                     </div>
-                    <h3>PDCAサイクル</h3>
-                    <p>業務に対して、計画・実行・評価・改善のサイクルを回す。「なんとなく続ける」から「意図して成長する」組織へ。標準化によって原価を確定し、ビジネスモデルを安定させます。</p>
-                </div>
-                <div class="management-card fade-in">
-                    <div class="management-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <div class="pillar-item">
+                        <div class="pillar-index">03</div>
+                        <div class="pillar-body">
+                            <h3>現状維持から次のステージへ</h3>
+                            <p>マネジメントは現状の問題を修正するものではなく、「次に何をやるか」を組織として描くための仕組みです。課題を持ち続け、挑戦する企業文化を育てます。</p>
+                        </div>
                     </div>
-                    <h3>現状維持から次のステージへ</h3>
-                    <p>マネジメントは現状の問題を修正するものではなく、「次に何をやるか」を組織として描くための仕組みです。課題を持ち続け、挑戦する企業文化を育てます。</p>
                 </div>
             </div>
-            <div class="management-message fade-in">
-                <div class="management-message-inner">
-                    <p>マネジメントの第一歩は、<span>「仕組み」を会社に持ち込むことから始まります。</span></p>
-                    <p class="management-sub">その入口として、ISOは有効なフレームワークです。年間20万円前後から始められます。</p>
+
+            <div class="management-callout fade-in">
+                <div class="callout-inner">
+                    <p class="callout-text">マネジメントの第一歩は、<em>「仕組み」を会社に持ち込むことから始まります。</em></p>
+                    <p class="callout-note">その入口として、ISOは有効なフレームワークです。年間20万円前後から始められます。</p>
+                    <a href="#empathy" class="callout-link">自社の課題を確認する →</a>
                 </div>
-                <a href="#empathy" class="btn-white">自社の課題を確認する →</a>
             </div>
+
         </div>
     </section>
 
     <!-- ========== 01. 課題共感 ========== -->
     <section class="empathy" id="empathy">
+        <div class="empathy-bg-text" aria-hidden="true">CHALLENGE</div>
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="step-num">01. YOUR CHALLENGES</span>
-                <h2>こんな状況はありませんか？</h2>
-                <p>規模・業種を問わず、多くの企業が直面しているマネジメントの現実</p>
+            <div class="empathy-header fade-in">
+                <span class="section-kicker light">01 — YOUR CHALLENGES</span>
+                <h2 class="section-title-editorial light">こんな状況は<br>ありませんか？</h2>
+                <p class="empathy-sub">規模・業種を問わず、多くの企業が直面しているマネジメントの現実</p>
             </div>
-            <div class="empathy-grid">
-                <div class="empathy-card fade-in">
-                    <div class="empathy-num">01</div>
-                    <h3>取引先に言われたが<br>何から始めればいいかわからない</h3>
-                    <p>ISO取得を求められたが、手順も費用感もよくわからず、なかなか動き出せない。引継ぎ後の運用も不安だ。</p>
+
+            <div class="empathy-challenges fade-in">
+                <div class="challenge-item">
+                    <div class="challenge-num">01</div>
+                    <div class="challenge-body">
+                        <h3>取引先に言われたが<br>何から始めればいいかわからない</h3>
+                        <p>ISO取得を求められたが、手順も費用感もよくわからず、なかなか動き出せない。引継ぎ後の運用も不安だ。</p>
+                    </div>
                 </div>
-                <div class="empathy-card fade-in">
-                    <div class="empathy-num">02</div>
-                    <h3>本業への支障が<br>心配で踏み出せない</h3>
-                    <p>ISOに取り組むことで、現場の業務が圧迫されないか不安がある。低負担で取り組みたいが方法がわからない。</p>
+                <div class="challenge-item">
+                    <div class="challenge-num">02</div>
+                    <div class="challenge-body">
+                        <h3>本業への支障が<br>心配で踏み出せない</h3>
+                        <p>ISOに取り組むことで、現場の業務が圧迫されないか不安がある。低負担で取り組みたいが方法がわからない。</p>
+                    </div>
                 </div>
-                <div class="empathy-card fade-in">
-                    <div class="empathy-num">03</div>
-                    <h3>担当者が変わると<br>業務が止まってしまう</h3>
-                    <p>特定の社員に依存した運用になっており、引継ぎや人材育成に多大なコストがかかっている。</p>
+                <div class="challenge-item">
+                    <div class="challenge-num">03</div>
+                    <div class="challenge-body">
+                        <h3>担当者が変わると<br>業務が止まってしまう</h3>
+                        <p>特定の社員に依存した運用になっており、引継ぎや人材育成に多大なコストがかかっている。</p>
+                    </div>
                 </div>
-                <div class="empathy-card fade-in">
-                    <div class="empathy-num">04</div>
-                    <h3>取得後の運用が<br>形骸化してしまった</h3>
-                    <p>審査は通るが、現場の改善には繋がっていない。ISOが「義務」のままになり、本業の足かせになっている。</p>
+                <div class="challenge-item">
+                    <div class="challenge-num">04</div>
+                    <div class="challenge-body">
+                        <h3>取得後の運用が<br>形骸化してしまった</h3>
+                        <p>審査は通るが、現場の改善には繋がっていない。ISOが「義務」のままになり、本業の足かせになっている。</p>
+                    </div>
                 </div>
             </div>
-            <div class="empathy-message fade-in">
-                <p>まずはご相談ください。<br><span>貴社の強みと可能性を起点に、最短距離でお応えします。</span></p>
+
+            <div class="empathy-answer fade-in">
+                <p>まずはご相談ください。<br><em>貴社の強みと可能性を起点に、最短距離でお応えします。</em></p>
+                <a href="/contact/index.html" class="btn btn-outline-white">無料相談を申し込む</a>
             </div>
         </div>
     </section>
@@ -133,36 +265,38 @@
     <!-- ========== 02. ISOという手段 ========== -->
     <section class="iso-intro" id="iso-intro">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="step-num">02. ISO AS MANAGEMENT</span>
-                <h2>ISOは、マネジメントの<br>フレームワークです。</h2>
-                <p>「取得するもの」ではなく「仕組みを会社に根づかせるもの」として</p>
+            <div class="iso-header fade-in">
+                <span class="section-kicker">02 — ISO AS MANAGEMENT</span>
+                <h2 class="section-title-editorial">ISOは、マネジメントの<br>フレームワークです。</h2>
+                <p class="iso-header-sub">「取得するもの」ではなく「仕組みを会社に根づかせるもの」として</p>
             </div>
-            <div class="iso-layout fade-in">
-                <div class="iso-text-block">
-                    <p>マネジメントの考え方を、誰でも実践可能なかたちに落とし込んだ“型”が、<strong>ISOマネジメントシステム規格</strong>です。</p>
+
+            <div class="iso-split fade-in">
+                <div class="iso-text">
+                    <p>マネジメントの考え方を、誰でも実践可能なかたちに落とし込んだ"型"が、<strong>ISOマネジメントシステム規格</strong>です。</p>
                     <p>ISOを「審査に通るためのもの」として捉えられることも少なくありませんが、本来ISOが持つ価値はそこではありません。</p>
                     <p>ISOの要求事項は、<strong>組織化・標準化・改善サイクル</strong>という、まさにマネジメントの骨格と重なります。第三者の目が入ることでマンネリ化を防ぎ、定期的に組織を見直す仕組みが自然に生まれます。</p>
                     <p>ISOという共通フレームワークを通じて、貴社がマネジメントを自走できる状態をつくることが、私たちの役割です。</p>
                 </div>
-                <div class="iso-points">
-                    <p class="iso-points-title">ISOがもたらす、組織への3つの変化</p>
-                    <div class="iso-point">
-                        <span class="iso-point-icon">✓</span>
+
+                <div class="iso-effects">
+                    <p class="iso-effects-title">ISOがもたらす、組織への3つの変化</p>
+                    <div class="iso-effect-item">
+                        <span class="iso-effect-mark">✓</span>
                         <div>
                             <strong>第三者の視点が組織に刺激を与える</strong>
                             <p>内部では気づきにくい課題を、審査員の客観的な目で発見。マンネリ化防止に有効です。</p>
                         </div>
                     </div>
-                    <div class="iso-point">
-                        <span class="iso-point-icon">✓</span>
+                    <div class="iso-effect-item">
+                        <span class="iso-effect-mark">✓</span>
                         <div>
                             <strong>PDCAが業務に自然に組み込まれる</strong>
                             <p>要求事項に沿って動くことで、改善サイクルが組織の習慣として定着します。</p>
                         </div>
                     </div>
-                    <div class="iso-point">
-                        <span class="iso-point-icon">✓</span>
+                    <div class="iso-effect-item">
+                        <span class="iso-effect-mark">✓</span>
                         <div>
                             <strong>顧客・取引先からの信頼性が高まる</strong>
                             <p>ISOは国際的に認められた基準のため、組織の信頼性を対外的に証明し、社会的な信用の基盤となります。</p>
@@ -176,89 +310,70 @@
     <!-- ========== 03. サービス概要 ========== -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="step-num">03. OUR SERVICES</span>
-                <h2>私たちが提供する、4つのサービス</h2>
+            <div class="services-header fade-in">
+                <span class="section-kicker">03 — OUR SERVICES</span>
+                <h2 class="section-title-mid">私たちが提供する、4つのサービス</h2>
                 <p>ISOを起点に、マネジメント強化に必要なサポートを一括してご提供します</p>
             </div>
-            <div class="services-simple-grid">
-                <a href="/services/iso-audit.html" class="service-simple-card fade-in">
-                    <div class="ssc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                    </div>
-                    <div class="ssc-body">
+
+            <div class="services-grid fade-in">
+                <a href="/services/iso-audit.html" class="service-card">
+                    <div class="service-card-num">01</div>
+                    <div class="service-card-body">
                         <h3>ISO認証審査</h3>
                         <p>ISO9001 / 14001 / 27001 / 45001に対応。スタンダード・アドバンスの2コースから選択できます。</p>
                     </div>
-                    <span class="ssc-arrow">→</span>
+                    <span class="service-card-arrow">→</span>
                 </a>
-                <a href="/services/iso-audit.html" class="service-simple-card fade-in">
-                    <div class="ssc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </div>
-                    <div class="ssc-body">
+                <a href="/services/iso-audit.html" class="service-card">
+                    <div class="service-card-num">02</div>
+                    <div class="service-card-body">
                         <h3>監査サービス</h3>
                         <p>業務監査・セキュリティ監査・情報セキュリティ簡易診断。ISO認証不要でも利用できます。</p>
                     </div>
-                    <span class="ssc-arrow">→</span>
+                    <span class="service-card-arrow">→</span>
                 </a>
-                <a href="/services/iso-audit.html" class="service-simple-card fade-in">
-                    <div class="ssc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <div class="ssc-body">
+                <a href="/services/iso-audit.html" class="service-card">
+                    <div class="service-card-num">03</div>
+                    <div class="service-card-body">
                         <h3>内部監査代行</h3>
                         <p>計画策定から実施・改善までを代行。担当者の負担を削減し、形骸化しない内部監査を実現します。</p>
                     </div>
-                    <span class="ssc-arrow">→</span>
+                    <span class="service-card-arrow">→</span>
                 </a>
-                <a href="/services/webmics.html" class="service-simple-card fade-in">
-                    <div class="ssc-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                    </div>
-                    <div class="ssc-body">
+                <a href="/services/webmics.html" class="service-card">
+                    <div class="service-card-num">04</div>
+                    <div class="service-card-body">
                         <h3>WebMiCS2（Axisio）</h3>
                         <p>文書管理・審査記録・AI分析を一元化する業務改善ツール。すべてのサービスに付属します。</p>
                     </div>
-                    <span class="ssc-arrow">→</span>
+                    <span class="service-card-arrow">→</span>
                 </a>
             </div>
-            <div class="iso-note">※ 当社はコンサル業務は行いません。</div>            
+            <p class="services-note fade-in">※ 当社はコンサル業務は行いません。</p>
         </div>
     </section>
 
     <!-- ========== Impact ========== -->
     <section class="impact">
         <div class="container">
-            <div class="impact-box fade-in">
-                <h2>仕組みづくりが生み出す「企業進化の姿」</h2>
+            <div class="impact-inner fade-in">
+                <p class="impact-label">仕組みづくりが生み出す「企業進化の姿」</p>
                 <div class="impact-grid">
                     <div class="impact-item">
-                        <div class="impact-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
-                        </div>
-                        <span class="impact-val">30-50%</span>
+                        <span class="impact-val">30–50<small>%</small></span>
                         <span class="impact-desc">文書・記録管理工数の削減</span>
                     </div>
                     <div class="impact-item">
-                        <div class="impact-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                        </div>
                         <span class="impact-val">SPEED</span>
                         <span class="impact-desc">意思決定スピードの向上</span>
                     </div>
                     <div class="impact-item">
-                        <div class="impact-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-                        </div>
-                        <span class="impact-val">STANDARD</span>
+                        <span class="impact-val">STD.</span>
                         <span class="impact-desc">組織力の底上げ</span>
                     </div>
                     <div class="impact-item">
-                        <div class="impact-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </div>
-                        <span class="impact-val">CULTURE</span>
+                        <span class="impact-val">CULT.</span>
                         <span class="impact-desc">挑戦できる組織文化の獲得</span>
                     </div>
                 </div>
@@ -269,39 +384,38 @@
     <!-- ========== 04. 日本の未来像 ========== -->
     <section class="vision" id="vision">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="step-num">04. FUTURE VISION</span>
-                <h2>中小企業が強くなると、<br>日本が変わる。</h2>
+            <div class="vision-header fade-in">
+                <span class="section-kicker">04 — FUTURE VISION</span>
+                <h2 class="section-title-editorial">中小企業が強くなると、<br>日本が変わる。</h2>
                 <p>マネジメントを強化した企業が増えることで、社会全体の底上げへとつながります</p>
             </div>
-            <div class="vision-grid">
-                <div class="vision-card fade-in">
-                    <div class="vision-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+
+            <div class="vision-list fade-in">
+                <div class="vision-item">
+                    <span class="vision-item-num">01</span>
+                    <div class="vision-item-body">
+                        <h3>属人化に頼らず、仕組みで安定運営できる会社</h3>
+                        <p>誰が担当しても再現できる体制が構築され、経営が現場対応に取られず、未来を描く時間が確保できる企業へ。</p>
                     </div>
-                    <h3>属人化に頼らず、<br>仕組みで安定運営できる会社</h3>
-                    <p>誰が担当しても再現できる体制が構築され、経営が現場対応に取られず、未来を描く時間が確保できる企業へ。</p>
                 </div>
-                <div class="vision-card fade-in">
-                    <div class="vision-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <div class="vision-item">
+                    <span class="vision-item-num">02</span>
+                    <div class="vision-item-body">
+                        <h3>改善が文化として次世代に根づく会社</h3>
+                        <p>ISOを"取るため"ではなく"成長の基盤"として活用。若手・新人も自然と改善に参加し、組織が継続的に進化する企業へ。</p>
                     </div>
-                    <h3>改善が文化として<br>次世代に根づく会社</h3>
-                    <p>ISOを"取るため"ではなく"成長の基盤"として活用。若手・新人も自然と改善に参加し、組織が継続的に進化する企業へ。</p>
                 </div>
-                <div class="vision-card fade-in">
-                    <div class="vision-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div class="vision-item">
+                    <span class="vision-item-num">03</span>
+                    <div class="vision-item-body">
+                        <h3>「安心して任せられる」と社会から評価される会社</h3>
+                        <p>認証を信頼の証として活かし、取引先・顧客から「この会社なら任せられる」と選ばれる企業へ。</p>
                     </div>
-                    <h3>「安心して任せられる」と<br>社会から評価される会社</h3>
-                    <p>認証を信頼の証として活かし、取引先・顧客から「この会社なら任せられる」と選ばれる企業へ。</p>
                 </div>
             </div>
+
             <div class="vision-bridge fade-in">
-                <div class="bridge-arrow">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-                </div>
-                <p>こうした企業が増えていけば、日本の中小企業はもっと強く、もっと豊かに発展していけるはずです。<br><span>その「企業の未来像」の集合体こそが、「日本社会の未来像」につながります。</span></p>
+                <p>こうした企業が増えていけば、日本の中小企業はもっと強く、もっと豊かに発展していけるはずです。<br><em>その「企業の未来像」の集合体こそが、「日本社会の未来像」につながります。</em></p>
             </div>
         </div>
     </section>
@@ -309,17 +423,18 @@
     <!-- ========== 05. 強みと実績 ========== -->
     <section class="about" id="about">
         <div class="container">
-            <div class="section-header fade-in">
-                <span class="step-num">05. STRENGTH</span>
-                <h2>信頼と実績</h2>
-                <p>当社は、NSホールディングスグループとして、中小企業の経営基盤を支えるパートナーであり続けます</p>
+            <div class="about-header fade-in">
+                <span class="section-kicker">05 — STRENGTH</span>
+                <h2 class="section-title-mid">信頼と実績</h2>
+                <p>NSホールディングスグループとして、中小企業の経営基盤を支えるパートナーであり続けます</p>
             </div>
-            <div class="about-layout fade-in">
-                <div class="stat-item">
+
+            <div class="about-stats fade-in">
+                <div class="about-stat-big">
                     <span class="number" data-target="6000">0</span>
-                    <span class="label">グループ合計登録組織数</span>
+                    <span class="about-stat-label">グループ合計登録組織数</span>
                 </div>
-                <div class="chart-wrapper">
+                <div class="about-chart-wrap">
                     <div class="chart-container">
                         <canvas id="isoChart"></canvas>
                         <div class="chart-center-label">
@@ -343,12 +458,15 @@
     <!-- ========== Essence ========== -->
     <section class="essence">
         <div class="container">
-            <div class="essence-content fade-in">
-                <h2>私たちの提案の本質</h2>
-                <p>私たちは、ISOを"取得するもの"とは考えていません。<br>それは、企業の未来を動かす"仕組み"です。</p>
-                <p>システムを入れることが目的ではなく、形だけ整えることでもありません。<br>貴社のビジョンと現場を結び、成長が自然に生まれる状態をつくること。<br>その未来を共に創る存在でありたい。それが、私たちの提案の本質です。</p>
-                <p class=>なお、ご契約はもちろん任意です。<br>貴社の未来に価値を生み出せると確信できた場合にのみ、共に歩ませていただきたいと考えております。</p>
-                <a href="/contact/index.html" class="btn btn-large">まずは相談してみる</a>
+            <div class="essence-inner fade-in">
+                <p class="essence-kicker">私たちの提案の本質</p>
+                <h2 class="essence-title">ISOを"取得するもの"とは<br>考えていません。</h2>
+                <div class="essence-body">
+                    <p>それは、企業の未来を動かす"仕組み"です。</p>
+                    <p>システムを入れることが目的ではなく、形だけ整えることでもありません。<br>貴社のビジョンと現場を結び、成長が自然に生まれる状態をつくること。<br>その未来を共に創る存在でありたい。それが、私たちの提案の本質です。</p>
+                    <p class="essence-note">なお、ご契約はもちろん任意です。貴社の未来に価値を生み出せると確信できた場合にのみ、共に歩ませていただきたいと考えております。</p>
+                </div>
+                <a href="/contact/index.html" class="btn btn-orange btn-large">まずは相談してみる</a>
             </div>
         </div>
     </section>

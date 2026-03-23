@@ -507,7 +507,12 @@ header.scrolled ~ .mobile-menu {
 /* ===========================
    Footer
    =========================== */
-footer { background-color: var(--primary); color: var(--white); padding: 80px 0 40px; }
+footer { 
+    background-color: var(--primary); 
+    color: var(--white); 
+    padding: 80px 0 40px; 
+    min-width: 0px;
+}
 .footer-top { display: flex; justify-content: space-between; margin-bottom: 60px; }
 .footer-logo {
     text-decoration: none; color: var(--white);
