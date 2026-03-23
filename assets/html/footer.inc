@@ -31,7 +31,7 @@
                 </div>
                 <div class="link-group">
                     <h4>Contact</h4>
-                    <a href="#">資料ダウンロード</a><!-- ※未実装 -->
+                    <a href="/download/index.html">資料ダウンロード</a><!-- ※仮実装 -->
                     <a href="/contact/index.html">お問い合わせ</a>
                 </div>
             </div>

@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn btn-nav btn-dl">
+            <a href="/download/index.html" class="btn btn-nav btn-dl">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"></path></svg>資料ダウンロード
             </a>
             <a href="/contact/index.html" class="btn btn-nav btn-orange">
@@ -104,7 +104,7 @@
                 <a href="/recruit/index.html">採用情報</a>
             </div>
         </div>
-        <a href="#" class="mobile-btn-dl">資料ダウンロード</a>
+        <a href="/download/index.html" class="mobile-btn-dl">資料ダウンロード</a>
         <a href="/contact/index.html" class="mobile-btn-orange">お問い合わせ</a>
     </div>
 </header>
