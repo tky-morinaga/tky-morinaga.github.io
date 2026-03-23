@@ -1,0 +1,297 @@
+/* ============================================================
+   download.css — 資料ダウンロードページ専用スタイル
+   ※ common.css を読み込んだ後に読み込む
+   ============================================================ */
+
+/* ===========================
+   Page Hero
+   =========================== */
+.page-hero {
+    min-height: 320px;
+    background: linear-gradient(135deg, #0B1F3A 0%, #1a3a5f 100%);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding: 140px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+.page-hero-bg {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47,128,237,0.15) 0%, transparent 70%);
+    top: 50%; right: -100px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.page-hero-content { position: relative; z-index: 1; }
+.page-hero-label {
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.4em; opacity: 0.5;
+    margin-bottom: 16px; display: block;
+}
+.page-hero h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 900; margin-bottom: 20px;
+    line-height: 1.3;
+}
+.page-hero p {
+    font-size: 15px; opacity: 0.75;
+    line-height: 1.9; font-weight: 300;
+}
+
+/* ===========================
+   Download Section
+   =========================== */
+.download-section {
+    padding: 80px 0 120px;
+    background: var(--bg);
+}
+
+/* ===========================
+   フィルター
+   =========================== */
+.dl-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+.dl-filter-btn {
+    padding: 8px 20px;
+    border: 1.5px solid #dde3ed;
+    border-radius: 100px;
+    background: var(--white);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.dl-filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.dl-filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+}
+
+/* ===========================
+   資料グリッド
+   =========================== */
+.dl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+.dl-card {
+    background: var(--white);
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.dl-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    border-color: var(--accent);
+}
+.dl-card.hidden { display: none; }
+
+/* カテゴリラベル */
+.dl-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 6px 16px;
+}
+.dl-label-iso     { background: #E6F0FF; color: var(--accent); }
+.dl-label-audit   { background: #E8F8EE; color: #27AE60; }
+.dl-label-tool    { background: #FFF3E6; color: #E07B20; }
+.dl-label-guide   { background: #F3E6FF; color: #8B5CF6; }
+
+/* カード本体 */
+.dl-card-body {
+    padding: 24px 24px 16px;
+    flex: 1;
+}
+.dl-card-icon {
+    width: 48px; height: 48px;
+    border-radius: 8px;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+.dl-card-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.dl-card-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+.dl-card-meta {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: #a0aab4;
+}
+.dl-card-meta li::before {
+    content: '—';
+    margin-right: 4px;
+    opacity: 0.5;
+}
+
+/* フッター */
+.dl-card-footer {
+    padding: 16px 24px 20px;
+    border-top: 1px solid var(--bg);
+}
+.btn-dl-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 3px 10px rgba(47,128,237,0.25);
+}
+.btn-dl-card:hover {
+    background: linear-gradient(135deg, #72d8f7 0%, #1a6fd4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(47,128,237,0.35);
+}
+
+/* ===========================
+   ダウンロードフォーム
+   =========================== */
+.dl-form-section {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    padding: 60px;
+    max-width: 720px;
+    margin: 0 auto;
+    scroll-margin-top: 100px;
+}
+.dl-form-header {
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 2px solid var(--bg);
+}
+.dl-form-header h2 {
+    font-size: 22px; font-weight: 900;
+    color: var(--primary); margin-bottom: 10px;
+}
+.dl-form-header p {
+    font-size: 14px; color: var(--text-light); line-height: 1.8;
+}
+
+/* contact.css と同じ form パーツを流用 */
+.form-group { margin-bottom: 28px; }
+.form-label {
+    display: block; font-size: 13px; font-weight: 700;
+    color: var(--primary); margin-bottom: 10px;
+}
+.required {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    color: var(--white); background: #E53E3E;
+    padding: 2px 7px; border-radius: 3px;
+    margin-left: 6px; vertical-align: middle;
+}
+.form-input {
+    width: 100%; padding: 13px 16px;
+    border: 1.5px solid #dde3ed; border-radius: 6px;
+    font-family: 'Noto Sans JP', sans-serif; font-size: 14px;
+    color: var(--text); background: var(--white);
+    transition: border-color 0.25s, box-shadow 0.25s; outline: none;
+}
+.form-input::placeholder { color: #b0b8c8; }
+.form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(47,128,237,0.12);
+}
+.privacy-check {
+    display: flex; align-items: center;
+    gap: 10px; font-size: 14px; cursor: pointer;
+}
+.privacy-check input { width: 18px; height: 18px; accent-color: var(--accent); }
+.privacy-link { color: var(--accent); text-decoration: underline; }
+.form-submit { text-align: center; margin-top: 12px; }
+.btn-submit {
+    display: inline-flex; align-items: center;
+    padding: 18px 48px;
+    background: linear-gradient(135deg, #2F80ED 0%, #1a5fbf 100%);
+    color: var(--white); font-size: 15px; font-weight: 700;
+    border: none; border-radius: 6px; cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 16px rgba(47,128,237,0.35);
+}
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(47,128,237,0.45);
+}
+.submit-note {
+    font-size: 12px; color: var(--text-light);
+    margin-top: 16px; line-height: 1.8;
+}
+.input-error {
+    border-color: #FC8181 !important;
+    background: #FFF5F5 !important;
+    box-shadow: 0 0 0 3px rgba(229,62,62,0.12) !important;
+}
+.form-error-box {
+    background: #FFF5F5; border: 1px solid #FC8181;
+    border-left: 4px solid #E53E3E; border-radius: 6px;
+    padding: 16px 20px; margin-bottom: 28px;
+    font-size: 14px; color: #C53030; line-height: 2;
+}
+.submit-complete {
+    text-align: center; padding: 48px 20px;
+}
+.submit-complete-icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--accent-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent); margin: 0 auto 28px;
+}
+.submit-complete h2 {
+    font-size: 22px; font-weight: 900;
+    color: var(--primary); margin-bottom: 16px;
+}
+.submit-complete p {
+    font-size: 14px; color: var(--text-light);
+    line-height: 1.9; margin-bottom: 8px;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 992px) {
+    .dl-grid { grid-template-columns: repeat(2, 1fr); }
+    .dl-form-section { padding: 40px; }
+}
+@media (max-width: 600px) {
+    .dl-grid { grid-template-columns: 1fr; }
+    .dl-filter { gap: 8px; }
+    .dl-form-section { padding: 28px 20px; }
+}
