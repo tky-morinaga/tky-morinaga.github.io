@@ -579,9 +579,20 @@ footer {
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .footer-top { flex-direction: column; gap: 40px; }
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
 }
 
 @media (max-width: 600px) {
     .container { padding: 0 20px; }
     .mobile-menu { top: 90px; }
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+    }
+    .link-group h4 { font-size: 14px; }
+    .link-group a { font-size: 13px; }
 }
