@@ -13,10 +13,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         el.outerHTML = await res.text();
     };
 
+    const isLP = window.location.pathname.startsWith('/lp/');
     await Promise.all([
-        insertHTML('#header-placeholder', '/assets/html/header.inc'),
-        insertHTML('#footer-placeholder', '/assets/html/footer.inc'),
-    ]);
+    insertHTML('#header-placeholder', isLP
+        ? '/assets/html/header-lp.inc'
+        : '/assets/html/header.inc'),
+    insertHTML('#footer-placeholder', '/assets/html/footer.inc'),
+]);
 
     // ↓ fetch完了後に各種初期化を実行
 
