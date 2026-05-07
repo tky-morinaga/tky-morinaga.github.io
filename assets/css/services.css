@@ -1,0 +1,798 @@
+/* ============================================================
+   services.css — services/ 3ページ共用スタイル
+   ============================================================ */
+
+/* ---------- ページヒーロー ---------- */
+.page-hero {
+  padding: 80px 24px;
+  text-align: center;
+}
+.page-hero--light {
+  background: #fff;
+  border-bottom: 1px solid #e6eaf0;
+}
+.page-hero--dark {
+  background: var(--primary);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero--dark::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  background: var(--accent);
+  opacity: 0.06;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.page-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.page-hero__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.page-hero--dark .page-hero__label {
+  color: #8ab4f8;
+}
+.page-hero__title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+.page-hero--dark .page-hero__title {
+  color: #fff;
+}
+.page-hero__title--italic {
+  font-style: italic;
+  letter-spacing: 0.1em;
+}
+.page-hero__sub {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+.page-hero--dark .page-hero__sub {
+  color: #a8b8d0;
+}
+.page-hero__sub--accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- セクション共通 ---------- */
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 48px;
+}
+.section-heading--light {
+  color: #fff;
+}
+
+/* ---------- ロジックBOX ---------- */
+.logic-box {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 32px 40px;
+  margin-bottom: 48px;
+}
+.logic-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.logic-box p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* ---------- チェックリスト ---------- */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.check-list li {
+  padding: 10px 0 10px 28px;
+  position: relative;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e6eaf0;
+}
+.check-list li:last-child {
+  border-bottom: none;
+}
+.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ============================================================
+   services/index.html — サービス一覧ページ
+   ============================================================ */
+
+/* ヒーロー */
+.services-hero {
+  background: var(--primary);
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.services-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(47,128,237,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.services-hero__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.services-hero__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+.services-hero__title {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.services-hero__sub {
+  font-size: 1rem;
+  color: #8ab4cc;
+}
+
+/* 理念セクション */
+.services-philosophy {
+  padding: 80px 24px;
+  background: #fff;
+}
+.services-philosophy__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.services-philosophy__lead {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 40px 48px;
+  margin-bottom: 56px;
+}
+.services-philosophy__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+.services-philosophy__lead p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.services-philosophy__lead p:last-child {
+  margin-bottom: 0;
+}
+.services-philosophy__accent {
+  font-weight: 700;
+  color: var(--accent) !important;
+}
+.services-philosophy__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.services-philosophy__text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.services-philosophy__text p {
+  font-size: 0.875rem;
+  line-height: 1.9;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+.services-philosophy__checklist {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+/* サービスカード一覧 */
+.services-list {
+  padding: 80px 24px;
+  background: var(--bg);
+}
+.services-list__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.service-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e6ef;
+  padding: 36px 40px;
+  text-decoration: none;
+  color: var(--text);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.service-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(47,128,237,0.1);
+  transform: translateY(-4px);
+}
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+.service-card--featured {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+.service-card--featured::before {
+  transform: scaleX(1);
+}
+.service-card__number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 10px;
+}
+.service-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.service-card__desc {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+.service-card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.service-card__link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* CTA */
+.services-cta {
+  background: var(--primary);
+  padding: 100px 24px;
+  text-align: center;
+}
+.services-cta__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.services-cta__heading {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.services-cta__sub {
+  font-size: 0.9rem;
+  color: #8ab4cc;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* ============================================================
+   services/iso-audit.html — ISO審査・監査ページ
+   ============================================================ */
+
+/* ページ内タブナビ */
+.service-tab-nav {
+  position: sticky;
+  top: 0; /* common.css の header 高さに応じて調整 */
+  z-index: 90;
+  background: #fff;
+  border-bottom: 1px solid #e0e6ef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.service-tab-nav__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 24px;
+}
+.service-tab-nav__item {
+  padding: 18px 24px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.service-tab-nav__item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+.service-tab-nav__item:hover,
+.service-tab-nav__item.active {
+  color: var(--accent);
+}
+.service-tab-nav__item.active::after,
+.service-tab-nav__item:hover::after {
+  transform: scaleX(1);
+}
+
+/* service-section */
+.service-section {
+  scroll-margin-top: 100px;
+}
+.service-section--alt {
+  background: var(--bg);
+}
+.service-section__body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+/* プランカード */
+.plan-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+.plan-card {
+  background: #fff;
+  border: 1px solid #e0e6ef;
+  border-radius: 12px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+}
+.plan-card--standard {
+  border-top: 4px solid #c8d3e0;
+}
+.plan-card--advance {
+  border-top: 4px solid var(--accent);
+  box-shadow: 0 4px 24px rgba(47,128,237,0.08);
+}
+.plan-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+.plan-card__name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.plan-card--advance .plan-card__name {
+  color: var(--accent);
+}
+.plan-card__badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--bg);
+  color: var(--text-light);
+  border: 1px solid #d0d8e4;
+  padding: 3px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.plan-card__badge--gold {
+  background: #fdfaf2;
+  color: #a07830;
+  border-color: #dfc98a;
+}
+.plan-card__target {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+.plan-card__note {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.plan-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  flex-grow: 1;
+}
+.plan-card__features li {
+  font-size: 0.825rem;
+  color: var(--text-light);
+  padding: 8px 0 8px 20px;
+  border-bottom: 1px solid #f0f3f8;
+  position: relative;
+  line-height: 1.6;
+}
+.plan-card__features li:last-child { border-bottom: none; }
+.plan-card__features li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  font-size: 0.5rem;
+  top: 12px;
+  color: #c0cad8;
+}
+.plan-card--advance .plan-card__features li::before {
+  color: var(--accent);
+}
+.plan-card__features--arrow li::before {
+  content: '→';
+  font-size: 0.75rem;
+  top: 9px;
+  color: var(--accent);
+}
+.plan-card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  padding-top: 16px;
+  border-top: 1px solid #e8edf4;
+  margin-top: auto;
+}
+.plan-card__price--gold {
+  color: var(--accent);
+}
+
+/* 成果物 */
+.deliverables {
+  margin-bottom: 72px;
+}
+.deliverables__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.deliverable-item {
+  text-align: center;
+  padding: 40px 32px;
+  border-right: 1px solid #e6eaf0;
+}
+.deliverable-item:last-child { border-right: none; }
+.deliverable-item__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e0e6ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--accent);
+}
+.deliverable-item h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.deliverable-item p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* アドバンスオプション */
+.advance-options {
+  margin-bottom: 0;
+}
+.advance-options__inner {
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 64px 56px;
+}
+.advance-options__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.advance-option-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 28px;
+}
+.advance-option-item__num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.advance-option-item h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.advance-option-item p {
+  font-size: 0.8rem;
+  color: #8ab4cc;
+  line-height: 1.8;
+}
+
+/* 内部監査代行 */
+.internal-cta {
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 48px 56px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  color: #fff;
+}
+.internal-cta__text {
+  flex: 1;
+}
+.internal-cta__text h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.internal-cta__text p {
+  font-size: 0.875rem;
+  line-height: 1.9;
+  color: #8ab4cc;
+}
+.internal-cta__price-box {
+  background: var(--accent);
+  border-radius: 12px;
+  padding: 28px 36px;
+  text-align: center;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+.internal-cta__plan {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+}
+.internal-cta__amount {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ============================================================
+   services/webmics.html — WebMiCS2ページ
+   ============================================================ */
+
+.webmics-features {
+  padding: 80px 24px;
+  background: #fff;
+}
+.webmics-features__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  text-align: center;
+}
+.webmics-feature-item__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid #e0e6ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--accent);
+}
+.webmics-feature-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.webmics-feature-item p {
+  font-size: 0.825rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.webmics-logic {
+  padding: 0 24px 72px;
+  background: #fff;
+}
+.webmics-logic__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.webmics-plans {
+  padding: 80px 24px;
+  background: var(--bg);
+}
+.webmics-plans__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.webmics-plan-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.webmics-plan-card {
+  background: #fff;
+  border: 1px solid #e0e6ef;
+  border-radius: 12px;
+  padding: 32px 28px;
+}
+.webmics-plan-card--featured {
+  border-color: var(--accent);
+  border-width: 2px;
+  box-shadow: 0 4px 24px rgba(47,128,237,0.1);
+}
+.webmics-plan-card__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.webmics-plan-card__name--gold {
+  color: var(--accent);
+}
+.webmics-plan-card__desc {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.webmics-plan-card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  border-top: 1px solid #e8edf4;
+  padding-top: 16px;
+}
+
+/* ============================================================
+   レスポンシブ
+   ============================================================ */
+@media (max-width: 992px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+  .plan-cards {
+    grid-template-columns: 1fr;
+  }
+  .services-philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .deliverables__grid {
+    grid-template-columns: 1fr;
+  }
+  .deliverable-item {
+    border-right: none;
+    border-bottom: 1px solid #e6eaf0;
+  }
+  .deliverable-item:last-child { border-bottom: none; }
+  .advance-options__grid {
+    grid-template-columns: 1fr;
+  }
+  .advance-options__inner {
+    padding: 40px 28px;
+  }
+  .internal-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 28px;
+    gap: 28px;
+  }
+  .webmics-features__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 480px;
+  }
+  .webmics-plan-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 56px 20px;
+  }
+  .service-section__body {
+    padding: 48px 20px;
+  }
+  .services-philosophy__lead {
+    padding: 28px 24px;
+  }
+  .plan-card {
+    padding: 28px 24px;
+  }
+  .service-tab-nav__item {
+    padding: 14px 16px;
+    font-size: 0.8rem;
+  }
+  .logic-box {
+    padding: 24px 20px;
+  }
+}

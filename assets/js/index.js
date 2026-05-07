@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- ジャーニーナビ：スクロール連動アクティブ ---
     const journeySteps = document.querySelectorAll('.journey-step');
-    const sections = ['intro', 'empathy', 'iso-intro', 'services', 'vision', 'about'];
+ const sections = ['intro', 'empathy', 'iso-intro', 'services', 'vision', 'about'];
 
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
