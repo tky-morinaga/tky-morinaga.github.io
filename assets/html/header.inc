@@ -1,7 +1,7 @@
 <header id="header">
     <div class="container">
         <a href="/index.html" class="logo">
-            IT × ISO <span>Vision</span>
+            <img src="/assets/img/arms-logo.png" alt="IT × ISO Vision" style="height: 60px;">
         </a>
         <nav class="nav-links">
             <div class="nav-dropdown">
@@ -49,9 +49,6 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn btn-nav btn-dl">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"></path></svg>資料ダウンロード
-            </a>
             <a href="/contact/index.html" class="btn btn-nav btn-orange">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:6px;"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>お問い合わせ
             </a>
@@ -104,7 +101,6 @@
                 <a href="/recruit/index.html">採用情報</a>
             </div>
         </div>
-        <a href="#" class="mobile-btn-dl">資料ダウンロード</a>
         <a href="/contact/index.html" class="mobile-btn-orange">お問い合わせ</a>
     </div>
 </header>
