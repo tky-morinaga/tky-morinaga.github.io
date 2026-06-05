@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>選ばれ続ける会社は、仕組みを持っている。| アームスタンダード株式会社</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/common.css">
-        <link rel="stylesheet" href="../assets/css/lp.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選ばれ続ける会社は、仕組みを持っている。| アームスタンダード株式会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/lp.css">
+</head>
+
 <body id="top">
 
     <!-- LP専用ヘッダー -->
@@ -35,7 +38,7 @@
 
                 <!-- フェーズ選択 -->
                 <div class="lp-phase-selector fade-in">
-                    <button class="lp-phase-btn" data-phase="a">
+                    <button class="lp-phase-btn" data-phase="a" style="pointer-events: none;">
                         <span class="lp-phase-btn-num">01</span>
                         <span class="lp-phase-btn-body">
                             <strong>まず認証だけ取りたい</strong>
@@ -43,7 +46,7 @@
                         </span>
                         <span class="lp-phase-btn-arrow">→</span>
                     </button>
-                    <button class="lp-phase-btn" data-phase="b">
+                    <button class="lp-phase-btn" data-phase="b" style="pointer-events: none;">
                         <span class="lp-phase-btn-num">02</span>
                         <span class="lp-phase-btn-body">
                             <strong>ISOを組織改善に活かしたい</strong>
@@ -51,7 +54,7 @@
                         </span>
                         <span class="lp-phase-btn-arrow">→</span>
                     </button>
-                    <button class="lp-phase-btn" data-phase="c">
+                    <button class="lp-phase-btn" data-phase="c" style="pointer-events: none;">
                         <span class="lp-phase-btn-num">03</span>
                         <span class="lp-phase-btn-body">
                             <strong>マネジメントをさらに強化したい</strong>
@@ -62,14 +65,17 @@
                 </div>
 
                 <div class="lp-hero-btns fade-in">
-                    <a href="#lp-cta" class="btn btn-orange">
-                        まず話を聞いてみる（無料・30分〜）
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <a href="#lp-mypage" class="btn btn-orange">
+                        マイページへログイン
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </a>
-                    <p class="lp-hero-note">費用なし・営業電話なし・契約強制なし</p>
+                    <p class="lp-hero-note">営業担当からご案内を受けた方はこちら</p>
                 </div>
                 <p class="lp-hero-mypage-note fade-in">
-                    営業担当からご案内を受けた方は <a href="#lp-mypage">マイページへ →</a>
+                    初めての方は <a href="https://www.armstandard.com/meeting">まず話を聞いてみる（無料相談） →</a>
                 </p>
             </div>
 
@@ -77,8 +83,8 @@
             <div class="lp-hero-right fade-in">
                 <div class="lp-phase-panel" id="lpPhasePanel">
                     <div id="lpPhasePanelDefault">
-                        <div class="lp-panel-label">YOUR SITUATION</div>
-                        <p class="lp-panel-prompt">01〜03を選択すると<br>貴社に合った情報が表示されます</p>
+                        <div class="lp-panel-label">ARMS STANDARD GROUP</div>
+                        <p class="lp-panel-prompt">NSホールディングスグループとして、<br>中小企業の経営基盤を支えるパートナーであり続けます</p>
                         <div class="lp-panel-stats">
                             <div class="lp-panel-stat">
                                 <span class="lp-panel-stat-num"><small>約</small>6,000<small>社</small></span>
@@ -99,7 +105,7 @@
                             <li>文書管理ツール WebMiCS が標準付属</li>
                             <li>年間20万円前後〜のご提案も可能</li>
                         </ul>
-                        <a href="#lp-cta" class="lp-panel-cta">無料相談を申し込む →</a>
+                        <a href="https://www.armstandard.com/meeting" class="lp-panel-cta">無料相談を申し込む →</a>
                     </div>
                     <div class="lp-panel-content" id="lpPhaseB">
                         <div class="lp-panel-label">PHASE 02 — 組織改善</div>
@@ -110,7 +116,7 @@
                             <li>詳細版レポートで深い組織改善</li>
                             <li>選べる4つのオプション審査</li>
                         </ul>
-                        <a href="#lp-cta" class="lp-panel-cta">無料相談を申し込む →</a>
+                        <a href="https://www.armstandard.com/meeting" class="lp-panel-cta">無料相談を申し込む →</a>
                     </div>
                     <div class="lp-panel-content" id="lpPhaseC">
                         <div class="lp-panel-label">PHASE 03 — マネジメント強化</div>
@@ -121,7 +127,7 @@
                             <li>WebMiCS2 で文書・記録を一元管理</li>
                             <li>AI分析による改善ポイントの可視化</li>
                         </ul>
-                        <a href="#lp-cta" class="lp-panel-cta">無料相談を申し込む →</a>
+                        <a href="https://www.armstandard.com/meeting" class="lp-panel-cta">無料相談を申し込む →</a>
                     </div>
                 </div>
             </div>
@@ -157,7 +163,8 @@
             </div>
             <div class="lp-iso-split fade-in">
                 <div class="lp-iso-text">
-                    <p>マネジメントとは、組織が目標を達成するために<strong>「人・仕事・仕組み」を整える営み</strong>です。売上を増やすでも、コストを削るでもなく——成果を上げるために、次に何をやるかを組織として描き、動かし続けること。それがマネジメントの本質です。</p>
+                    <p>マネジメントとは、組織が目標を達成するために<strong>「人・仕事・仕組み」を整える営み</strong>です。売上を増やすでも、コストを削るでもなく——成果を上げるために、次に何をやるかを組織として描き、動かし続けること。それがマネジメントの本質です。
+                    </p>
                 </div>
                 <div class="lp-iso-effects">
                     <span class="lp-iso-effects-title">マネジメントに必要な、3つの仕組み</span>
@@ -229,9 +236,12 @@
 
             <div class="lp-empathy-answer fade-in">
                 <p>まずはご相談ください。<br><em>貴社の課題を起点に、最適な仕組みをご提案します。</em></p>
-                <a href="#lp-cta" class="btn btn-outline-white">
+                <a href="https://www.armstandard.com/meeting" class="btn lp-header-consult-btn">
                     無料相談を申し込む
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="margin-left:8px;vertical-align:-2px;">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
@@ -250,7 +260,8 @@
                 <div class="lp-iso-text">
                     <p>仕組みが根づいた会社では、何が変わるのか——経営課題と対応させてご覧ください。</p>
                     <p>マネジメントの考え方を、誰でも実践可能なかたちに落とし込んだ"型"が、<strong>ISOマネジメントシステム規格</strong>です。</p>
-                    <p>ISOとは、組織運営の国際標準フレームワーク。<strong>取得することが目的ではなく、強い組織をつくるための手段</strong>です。その仕組みを最短で会社に根づかせることが、私たちの役割です。</p>
+                    <p>ISOとは、組織運営の国際標準フレームワーク。<strong>取得することが目的ではなく、強い組織をつくるための手段</strong>です。その仕組みを最短で会社に根づかせることが、私たちの役割です。
+                    </p>
                 </div>
                 <div class="lp-iso-effects">
                     <span class="lp-iso-effects-title">経営課題とISOの対応関係</span>
@@ -298,7 +309,10 @@
             <div class="lp-reasons-grid fade-in">
                 <div class="lp-reason-card">
                     <div class="lp-reason-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
                     </div>
                     <span class="lp-reason-num">REASON 01</span>
                     <h3>ISMS-AC認定の<br>公式審査機関</h3>
@@ -307,7 +321,11 @@
                 </div>
                 <div class="lp-reason-card">
                     <div class="lp-reason-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
                     </div>
                     <span class="lp-reason-num">REASON 02</span>
                     <h3>コンサルなし・審査のみで<br>中立性を確保</h3>
@@ -316,7 +334,11 @@
                 </div>
                 <div class="lp-reason-card">
                     <div class="lp-reason-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
                     </div>
                     <span class="lp-reason-num">REASON 03</span>
                     <h3>文書管理ツール<br>WebMiCSが標準付属</h3>
@@ -325,7 +347,13 @@
                 </div>
                 <div class="lp-reason-card">
                     <div class="lp-reason-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
                     </div>
                     <span class="lp-reason-num">REASON 04</span>
                     <h3>約6,000社の審査実績</h3>
@@ -346,38 +374,38 @@
             </div>
 
             <div class="lp-services-grid fade-in">
-                <a href="/contact/index.html" class="lp-service-card">
+                <div class="lp-service-card" style="pointer-events: none;">
                     <div class="lp-service-num">01</div>
                     <div class="lp-service-body">
-                        <h3>ISO認証審査</h3>
-                        <p>ISO9001 / 14001 / 27001 に対応。スタンダード・アドバンスの2コースから選択。</p>
+                        <h3>ISO9001</h3>
+                        <p>品質マネジメントシステム規格。業務プロセスの標準化により、製品・サービスの品質向上と顧客満足度アップを実現します。</p>
                     </div>
                     <span class="lp-service-arrow">→</span>
-                </a>
-                <a href="/contact/index.html" class="lp-service-card">
+                </div>
+                <div class="lp-service-card" style="pointer-events: none;">
                     <div class="lp-service-num">02</div>
                     <div class="lp-service-body">
-                        <h3>監査サービス</h3>
-                        <p>業務監査・セキュリティ監査・情報セキュリティ簡易診断。ISO認証不要でも利用可能。</p>
+                        <h3>ISO14001</h3>
+                        <p>環境マネジメントシステム規格。環境リスクの低減と法令順守を通じ、持続可能な企業活動と社会的信頼の獲得をサポートします。</p>
                     </div>
                     <span class="lp-service-arrow">→</span>
-                </a>
-                <a href="/contact/index.html" class="lp-service-card">
+                </div>
+                <div class="lp-service-card" style="pointer-events: none;">
                     <div class="lp-service-num">03</div>
                     <div class="lp-service-body">
-                        <h3>内部監査代行</h3>
-                        <p>計画策定から実施・改善までを代行。担当者の負担を削減し、形骸化しない内部監査を実現。</p>
+                        <h3>ISO27001</h3>
+                        <p>情報セキュリティマネジメントシステム規格。重要な情報資産を保護し、取引先や社会からの強固な信頼を構築します。</p>
                     </div>
                     <span class="lp-service-arrow">→</span>
-                </a>
-                <a href="/contact/index.html" class="lp-service-card">
+                </div>
+                <div class="lp-service-card" style="pointer-events: none;">
                     <div class="lp-service-num">04</div>
                     <div class="lp-service-body">
-                        <h3>WebMiCS2（Axisio）</h3>
-                        <p>文書管理・審査記録・AI分析を一元化する業務改善ツール。全サービスに付属。</p>
+                        <h3>WebMiCS</h3>
+                        <p>文書管理を一元化する業務改善ツール。ISO運用の形骸化を防ぎ、担当者の工数を大幅に削減します。</p>
                     </div>
                     <span class="lp-service-arrow">→</span>
-                </a>
+                </div>
             </div>
             <p class="lp-services-note fade-in">※ 当社はコンサル業務は行いません。詳細はお問い合わせください。</p>
         </div>
@@ -389,7 +417,7 @@
             <div class="lp-section-header fade-in">
                 <span class="lp-kicker">05 — PROCESS</span>
                 <h2 class="lp-section-title">ISOを取得するまでの流れ</h2>
-                <p class="lp-section-lead">「思ったより負担にならない」と感じていただけます。社長がやることは最小限です。</p>
+                <p class="lp-section-lead">「思ったより負担にならない」と感じていただけます</p>
             </div>
 
             <div class="lp-steps fade-in">
@@ -398,15 +426,15 @@
                     <div class="lp-step-body">
                         <span class="lp-step-period">30〜60分</span>
                         <h3>無料相談・ヒアリング</h3>
-                        <div class="lp-step-ceo"><strong>社長がやること：</strong>現状と課題をお話しいただくだけ</div>
+                        <div class="lp-step-ceo"><strong>現状と課題をお話しいただくだけです</strong></div>
                     </div>
                 </div>
                 <div class="lp-step">
                     <div class="lp-step-dot">2</div>
                     <div class="lp-step-body">
-                        <span class="lp-step-period">1〜2週間</span>
-                        <h3>マイページ登録・キックオフ</h3>
-                        <div class="lp-step-ceo"><strong>社長がやること：</strong>マイページへのログイン・方針の確認と意思決定</div>
+                        <span class="lp-step-period">2〜4週間</span>
+                        <h3>マイページ作成・ご提案</h3>
+                        <div class="lp-step-ceo"><strong>最適なサービスをご提案いたします</strong></div>
                     </div>
                 </div>
                 <div class="lp-step">
@@ -414,23 +442,23 @@
                     <div class="lp-step-body">
                         <span class="lp-step-period">約6〜10ヶ月</span>
                         <h3>システム構築・運用</h3>
-                        <div class="lp-step-ceo"><strong>社長がやること：</strong>月1回程度の進捗確認</div>
+                        <div class="lp-step-ceo"><strong>月1回程度、進捗を確認しつつ進めます</strong></div>
                     </div>
                 </div>
                 <div class="lp-step">
                     <div class="lp-step-dot">4</div>
                     <div class="lp-step-body">
-                        <span class="lp-step-period">約1〜2ヶ月</span>
+                        <span class="lp-step-period">約2～3ヶ月</span>
                         <h3>審査</h3>
-                        <div class="lp-step-ceo"><strong>社長がやること：</strong>審査当日の立ち会い</div>
+                        <div class="lp-step-ceo"><strong>審査当日の立ち会いなどのご対応</strong></div>
                     </div>
                 </div>
                 <div class="lp-step">
-                    <div class="lp-step-dot lp-step-dot-final">5</div>
+                    <div class="lp-step-dot lp-step-dot-final">✓</div>
                     <div class="lp-step-body">
                         <span class="lp-step-period">トータル約1年</span>
                         <h3>認証登録完了</h3>
-                        <div class="lp-step-ceo"><strong>達成：</strong>組織が自走する仕組みの完成</div>
+                        <div class="lp-step-ceo"><strong>組織が自走する仕組みの完成です</strong></div>
                     </div>
                 </div>
             </div>
@@ -457,7 +485,8 @@
                         <span class="lp-faq-arrow">›</span>
                     </button>
                     <div class="lp-faq-answer">
-                        <p>ISOとは、国際標準化機構が定めた組織運営のフレームワークです。取得しなければならないものではなく、組織の信頼性向上・業務標準化・マネジメント強化のための国際的な仕組みです。取引先から求められているケース、組織の成長を加速させたいケース、どちらにも有効です。まずは無料相談で、貴社の状況をお聞かせください。</p>
+                        <p>ISOとは、国際標準化機構が定めた組織運営のフレームワークです。取得しなければならないものではなく、組織の信頼性向上・業務標準化・マネジメント強化のための国際的な仕組みです。取引先から求められているケース、組織の成長を加速させたいケース、どちらにも有効です。まずは無料相談で、貴社の状況をお聞かせください。
+                        </p>
                     </div>
                 </div>
                 <div class="lp-faq-item">
@@ -475,7 +504,8 @@
                         <span class="lp-faq-arrow">›</span>
                     </button>
                     <div class="lp-faq-answer">
-                        <p>社長ご自身が関わるのは、ヒアリング（30〜60分）・方針の確認・月1回程度の進捗確認・審査当日の立ち会いが主です。文書管理ツール WebMiCS を活用することで、現場の工数も30〜50%削減できます。</p>
+                        <p>社長ご自身が関わるのは、ヒアリング（30〜60分）・方針の確認・月1回程度の進捗確認・審査当日の立ち会いが主です。文書管理ツール WebMiCS
+                            を活用することで、マネジメントシステム構築の工数を削減できます。</p>
                     </div>
                 </div>
                 <div class="lp-faq-item">
@@ -484,7 +514,8 @@
                         <span class="lp-faq-arrow">›</span>
                     </button>
                     <div class="lp-faq-answer">
-                        <p>形骸化は「審査のためだけに動く」運用になった際に起こります。当社では、審査プロセス自体が組織改善につながる設計になっており、WebMiCS を活用した継続的な記録・振り返りの仕組みを標準装備しています。</p>
+                        <p>形骸化は「審査のためだけに動く」運用になった際に起こります。当社では、審査プロセス自体が組織改善につながる設計になっており、WebMiCS
+                            を活用した継続的な記録・振り返りの仕組みを標準装備しています。</p>
                     </div>
                 </div>
                 <div class="lp-faq-item">
@@ -493,7 +524,8 @@
                         <span class="lp-faq-arrow">›</span>
                     </button>
                     <div class="lp-faq-answer">
-                        <p>マイページは、ヒアリング後に担当者が貴社専用に作成するオンライン管理画面です。進捗状況の確認・資料の共有・担当者とのやり取りをすべてマイページ上で行います。営業担当からご案内を受けた方は、発行されたURLよりログインしてください。</p>
+                        <p>マイページは、ヒアリング後に担当者が貴社専用に作成するオンライン管理画面です。進捗状況の確認・資料の共有・担当者とのやり取りをすべてマイページ上で行います。営業担当からご案内を受けた方は、発行されたURLよりログインしてください。
+                        </p>
                     </div>
                 </div>
                 <div class="lp-faq-item">
@@ -502,7 +534,7 @@
                         <span class="lp-faq-arrow">›</span>
                     </button>
                     <div class="lp-faq-answer">
-                        <p>いいえ、ご契約はもちろん任意です。無料相談では貴社の状況をお聞きし、最適なご提案をするだけです。強引な営業は一切行いません。</p>
+                        <p>いいえ、ご契約はもちろん任意です。無料相談では貴社の状況をお聞きし、最適なご提案をさせていただきます。強引な営業は一切行いません。</p>
                     </div>
                 </div>
             </div>
@@ -520,13 +552,15 @@
                     貴社の状況をお聞きし、最適な進め方をご提案します。
                 </p>
                 <div class="lp-cta-btns">
-                    <a href="/contact/index.html?type=consultation" class="btn btn-orange">
+                    <a href="https://www.armstandard.com/meeting" class="btn lp-header-consult-btn">
                         無料相談を申し込む
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </a>
                 </div>
                 <p class="lp-cta-sub">
-                    費用なし・営業電話なし・契約強制なし<br>
                     お電話でのご相談：03-3666-8814（平日 8:30〜17:30）
                 </p>
             </div>
@@ -578,14 +612,17 @@
             <div class="lp-mypage-inner fade-in">
                 <div class="lp-mypage-text">
                     <span class="lp-kicker">MYPAGE</span>
-                    <h2 class="lp-section-title">営業担当から<br>ご案内を受けた方へ</h2>
+                    <h2 class="lp-section-title">営業担当から<br>マイページのご案内を受けた方へ</h2>
                     <p class="lp-section-lead">担当者からご案内されたURLよりマイページにログインできます。まだアカウントをお持ちでない方は新規作成からどうぞ。</p>
                 </div>
                 <div class="lp-mypage-btns">
                     <a href="#" class="btn btn-outline-dark">新規作成</a>
                     <a href="#" class="btn btn-orange">
                         ログイン
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" style="margin-left:8px;vertical-align:-2px;">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -596,7 +633,9 @@
     <footer class="lp-footer">
         <div class="container">
             <div class="lp-footer-inner">
-                <a href="/index.html" class="lp-footer-logo">IT × ISO <span>Vision</span></a>
+                <a href="https://www.armstandard.com/" class="logo">
+                    <img src="/arms/assets/img/arms-logo.png" alt="IT × ISO Vision" style="height: 45px;">
+                </a>
                 <div class="lp-footer-links">
                     <a href="/privacy/index.html">プライバシーポリシー</a>
                     <span class="lp-footer-sep">|</span>
@@ -604,7 +643,7 @@
                     <span class="lp-footer-sep">|</span>
                     <a href="/company/index.html">会社概要</a>
                     <span class="lp-footer-sep">|</span>
-                    <a href="/index.html">コーポレートサイトへ</a>
+                    <a href="https://www.armstandard.com/">コーポレートサイトへ</a>
                 </div>
                 <span class="lp-copyright">&copy; ARM Standard Co., Ltd.</span>
             </div>
@@ -615,4 +654,5 @@
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/lp.js"></script>
 </body>
+
 </html>

@@ -3,7 +3,7 @@
         <div class="footer-top">
             <div class="footer-info">
                 <a href="/index.html" class="footer-logo">
-                    IT × ISO <span>Vision</span>
+                    <img src="/assets/img/arms-logo.png" alt="IT × ISO Vision" style="height: 60px;">
                 </a>
                 <p>お客様の経営改善を支えるパートナーに。</p>
             </div>
